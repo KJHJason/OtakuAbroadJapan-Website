@@ -1,0 +1,39 @@
+/* to resize the bootstrap 5 cards to suit the screen width */
+@media (max-width: 768px) {
+	.card {
+		width: 75% !important;
+		margin: auto;
+	}
+}
+
+@media (max-width: 576px) {
+	.card {
+		width: 95% !important;
+	}
+}
+/* for generate button css style */
+.buttonstyling {
+	padding: 15px 25px;
+	/* padding for the text inside */
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	/* changes the cursor to a pointer upon hovering over it */
+	outline: none;
+	color: #fff;
+	/* changes the font colour to white */
+	background-color: #262626;
+	/* changes the colour of the button to the main colour scheme of the website */
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+	/* box-shadow: 0px to the left, 9px down */;
+}
+
+.buttonstyling:active {
+	background-color: #262626;
+	box-shadow: 0 5px #666;
+	/* changes the box shadow to a darker colour when the user clicks it and box shadow moves to the top by 4px so that it looks like the button is being pressed */
+	transform: translateY(4px);
+	/* moves the button by 4px down on the y-axis */;
+}

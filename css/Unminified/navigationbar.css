@@ -1,0 +1,321 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* tells the browser to include the element's total width and height. E.g. width: 100px, will be inclusive of any padding or border it may and will not exceed 100px */
+}
+html {
+	scroll-behavior: smooth;
+	/* allows the scrolling behaviour to be smooth for the go top top button and href to another html file with an id but is not supported on safari browsers */
+}
+body {
+	text-align: center;
+	background-color: #000;
+	line-height: 1.5;
+	/* line-height property property sets the height of a line box / to set the distance between lines of text. it also helps people experiencing low vision conditions or with cognitive concerns to see */
+	font-family: serif;
+}
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+/* for the navbar */
+header {
+	height: 100px;
+	background: #262626;
+	width: 100%;
+	z-index: 2;
+	/* so that it will appear above the content and the go to top button but not the loading screen */
+	position: fixed;
+	/* for sticky navbar */
+	font-family: montserratbold;
+}
+/* for the logo */
+.logo {
+	height: 100px;
+	width: auto;
+	float: left;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	margin-top: 5px;
+}
+/* for the navigation bar links */
+nav ul {
+	float: right;
+	margin-right: 20px;
+}
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	/* to display list items horizontally */
+	line-height: 80px;
+	/* specifies the minimum height of line boxes within the element */
+	margin: 0 5px;
+}
+/* for the search bar */
+nav ul li form input {
+	border: 0;
+	border-radius: 3px;
+	vertical-align: middle;
+	/* vertical-align ensure that it is aligned in the centre for safari browser */
+	height: 34px;
+}
+/* for the search bar submit button which will appear only for screen width of 1303px */
+nav ul li form button {
+	display: none;
+	border-radius: 0 3px 3px 0;
+	/* border radius of 3px applied on top right corner and bottom right corner */
+	background-color: #fff;
+	padding: 1.5px;
+}
+/* for the navigation bar text */
+nav ul li a {
+	text-decoration: none;
+	/* to overwrite bootstrap 5 css */
+	color: #fff;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	/* makes all the letters uppercase */
+}
+a:hover {
+	transition: .5s;
+	/* transition to change colour by 500ms */
+	color: #949494;
+}
+a.active {
+	background: #ccc;
+}
+/* css for the label (for checkbox) for user to press/click on the hamburger for the navigation menu to appear */
+#nav-icon {
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	display: none;
+	/* hides the checkbox label content (hamburger menu icon) */
+}
+/* hides the checkbox */
+#check {
+	display: none;
+}
+/* to reduce the navigation text size and the logo size on the navbar to prevent the text from going below the navbar area */
+@media (max-width: 1250px) {
+	.logo {
+		height: 85px;
+		padding-left: 5px;
+	}
+	nav ul li a {
+		font-size: 16px;
+		padding: 7px 5px;
+	}
+	nav ul {
+		margin-right: 10px;
+	}
+}
+/* css for hamburger navbar for smaller device screens */
+@media (max-width: 1050px) {
+	/* for the unordered list in the navbar */
+	.ulnav {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		/*  1vh is equal to 1% of the viewport height, makes it so that when you zoom out, it will still cover 100% of the user's viewport height. */
+	background: #262626;
+	top: 80px;
+		/* displaces unordered list by 80px from the top */
+	left: -100%;
+		/* moves the unordered list/navigation links to the left to hide it and for the animation later */
+	text-align: center;
+	transition: all .5s;
+		/* transition of 500ms for the left to right animation (user opens navbar) or right to left animation (user closes navbar) */;
+}
+
+nav ul li {
+	display: block;
+		/* to display navigation links as individual blocks which will not align vertically like inline-block */
+	margin: 25px 0;
+		/* applies 25px margin to top and bottom and removes any margin on its right and left */
+	line-height: 30px;
+		/* specifies the minimum height of line boxes within the element */;
+}
+
+nav ul li a {
+	font-size: 20px;
+}
+	/* to allow the user to know where he/she is in the website */
+a:hover,
+	a.active {
+	background: none;
+	color: #949494;
+}
+
+#check:checked ~ ul {
+	left: 0;
+		/* when the user checks the checkbox/click on the label which is the hamburger menu icon, it will bring the unordered list/navigation links to the right by resetting its left property from 100% to 0% */;
+}
+	/* hamburger menu icon and label */
+#nav-icon {
+	display: block;
+		/* makes the checkbox appear for the user to click on it */
+	right: 25px;
+		/* to make the hamburger menu move left by 25px */
+	width: 50px;
+	height: 45px;
+	position: relative;
+		/* makes it relative to the navbar */
+	margin: 20px auto;
+		/* hamburger menu icon animation and to initialise the hamburger rotation */
+	-webkit-transform: rotate(0deg);
+		/* ensure compatibility for safari browsers */
+	-moz-transform: rotate(0deg);
+		/* ensure compatibility for mozilla firefox browsers */
+	-o-transform: rotate(0deg);
+		/* ensure compatibility for opera browsers */
+	transform: rotate(0deg);
+		/* transitioning to make the animation look smooth and consistent transitioning compared to ease-in and ease-out */
+		/* Reason: ease-out is fast at the beginning but slow at the end, ease-in is slow at the beginning but fast at the end so ease-in-out to ensure that they are the same speed at the beginning and at the end of the animation */
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+		/* changes the user cursor to a pointer */;
+}
+	/* creates a hamburger bar */
+#nav-icon span {
+	display: block;
+		/* display as a block so that the three hamburger bars do not line up vertically */
+	position: absolute;
+		/* fixes the position to the label css */
+	height: 9px;
+	width: 100%;
+	background: #fff;
+	border-radius: 9px;
+	opacity: 1;
+		/* needed for the main hamburger menu icon animation */
+	left: 0;
+		/* makes the hamburger bar not displace from the left */
+		/* hamburger menu icon animation and to initialise the hamburger rotation */
+	-webkit-transform: rotate(0deg);
+		/* ensure compatibility for safari browsers */
+	-moz-transform: rotate(0deg);
+		/* ensure compatibility for mozilla firefox browsers */
+	-o-transform: rotate(0deg);
+		/* ensure compatibility for opera browsers */
+	transform: rotate(0deg);
+		/* transitioning to make the animation look smooth and consistent transitioning compared to ease-in and ease-out */
+		/* Reason: ease-out is fast at the beginning but slow at the end, ease-in is slow at the beginning but fast at the end so ease-in-out to ensure that they are the same speed at the beginning and at the end of the animation */
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+	/* for the hamburger individual bar to make a complete hamburger menu icon with an increment of 18px */
+#nav-icon span:nth-child(1) {
+	top: 0px;
+}
+
+#nav-icon span:nth-child(2) {
+	top: 18px;
+}
+
+#nav-icon span:nth-child(3) {
+	top: 36px;
+}
+	/* animation for the first hamburger bar when hamburger menu icon is opened/has class="open"*/
+#nav-icon.open span:nth-child(1) {
+	top: 18px;
+		/* makes the first bar rotate by 135 degree */
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+	/* animation for the second hamburger bar */
+#nav-icon.open span:nth-child(2) {
+	opacity: 0;
+	left: -60px;
+		/* makes it go to the left by 60px */;
+}
+	/* animation for the third hamburger bar */
+#nav-icon.open span:nth-child(3) {
+	top: 18px;
+		/* takes the same position of the first navbar hamburger bar */
+		/* makes the first bar rotate by -135 degree, basically inverting the first bar rotation */
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
+
+nav ul li form button {
+	display: inline-block;
+		/* inline-block to make the submit button inline with the input for the search function */
+	border: 0;
+}
+
+nav ul li form input {
+	border-radius: 3px 0 0 3px;
+		/* applies border radius of 3px for top left corner and bottom left corner */;
+}
+}
+/* remove search button below 270px screen width */
+@media (max-width: 270px) {
+	nav ul li form button {
+		display: none !important;
+	}
+
+	nav ul li form input {
+		width: 80%;
+		border-radius: 3px;
+	}
+}
+/* reduce font size of navbar */
+@media (max-width: 952px) {
+	nav ul li a {
+		font-size: 16px;
+	}
+}
+/* Go to top button style */
+#button {
+	text-decoration: none;
+	/* to overwrite bootstrap 5 */
+	background-color: #949494;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: background-color .3s, opacity .5s, visibility .5s;
+	/* makes it so that it changes bg colour, opacity, visbiility by 300ms, 500ms, and 500ms respectively */
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+}
+
+#button::after {
+	content: "\f077";
+	/* adds the go to top arrow symbol after the anchor tag */
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	/* normal (sometimes referred to as "roman" or "upright"), i.e. sets it to the default font-style */
+	font-size: 2em;
+	line-height: 50px;
+	/* to set the distance between lines of text */
+	color: #fff;
+}
+
+#button:hover {
+	cursor: pointer;
+	/* changes cursor to a pointer upon hover */
+	background-color: #333;
+}
+/* makes the go to top button appear when it has a class="show" */
+#button.show {
+	opacity: 1;
+	visibility: visible;
+}

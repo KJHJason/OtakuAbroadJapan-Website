@@ -1,0 +1,93 @@
+body {
+	text-align: center;
+	background-color: #262626;
+	font-family: serif;
+	font-weight: bolder;
+}
+/* for the content, not using bootstrap 5 */
+.container {
+	margin: auto;
+	height: 100%;
+	max-width: 60vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+/* for the button animation */
+a {
+	margin-top: 20px;
+	font-size: 1.33em;
+	text-transform: uppercase;
+	color: #fff;
+	position: relative;
+    /* relative so that it will move accordingly to the animation upon hover */
+	background: #262626;
+	border: 1px solid #fff;
+	padding: 20px;
+	box-shadow: 4px 4px 0px 0px #fff;
+    /* applies box-shadow to the right, bottom for the first two values respectively and no blur and spread radius of the shadow for the third and fourth values respectively */
+	letter-spacing: 2px;
+	transition: all 0.3s ease-in-out;
+    /* transitioning to make the animation look smooth and consistent transitioning compared to ease-in and ease-out */
+    /* Reason: ease-out is fast at the beginning but slow at the end, ease-in is slow at the beginning but fast at the end so ease-in-out to ensure that they are the same speed at the beginning and at the end of the animation */
+	left: 0;
+	top: 0;
+}
+/* animation upon hover */
+a:hover {
+    /* moves the anchor tag 4px to the right and 4px to the bottom and get rids of the box-shadow */
+	left: 4px;
+	top: 4px;
+	box-shadow: 0 0 0 0 #fff;
+}
+
+#error {
+	font-size: 10em;
+}
+
+#copyright-error {
+	bottom: 0;
+	right: 5px;
+	color: #fff;
+	position: absolute;
+	margin: 0 5px;
+    /* to fix the position of the text to the bottom right */;
+}
+/* for responsiveness for the container and the font-size of the text */
+@media screen and (max-width: 1200px) {
+	.container {
+		max-width: 80vw;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		max-width: 100vw;
+	}
+
+	a {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	#error {
+		font-size: 40vw;
+	}
+
+	a {
+		font-size: 1em;
+		padding: 15px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	#error {
+		font-size: 40vw;
+	}
+
+	a, #copyright-error {
+		font-size: 5vw;
+	}
+}

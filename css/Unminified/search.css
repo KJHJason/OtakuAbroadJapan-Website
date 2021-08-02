@@ -1,0 +1,35 @@
+.searchresults {
+	text-align: left;
+}
+
+.searchresults h1 {
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.searchresults h3 {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+	.content-area h1 {
+		padding: 0 3%;
+	}
+
+	.content-area h3 {
+		padding: 0 3%;
+	}
+}
+
+#searchstyle {
+	width: 100%;
+	margin: auto;
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+#last-content {
+	margin-bottom: 40px;
+}

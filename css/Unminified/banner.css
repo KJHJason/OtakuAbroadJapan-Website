@@ -1,0 +1,37 @@
+#banner-area {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	/* makes the banner image sticky/not move upon scrolling */
+	top: -100px;
+	/* displaces the banner image by 100px from the top */
+	-webkit-background-size: cover;
+	/* ensure cross-browser compatibility for safari browsers */
+	background-position: center;
+}
+
+.content-area {
+	min-height: 100vh;
+	/* 1vh is equal to 1% of the viewport height, makes it so that when you zoom out, it will still cover 100% of the user's viewport height. */
+	width: 100%;
+	position: relative;
+	/* makes it relative to the sticky navbar and the banner image */
+	top: 650px;
+	/* displaces the content area by 650px from the top */
+	background: #000;
+}
+/* adjust the displacement of the content area from the top depending on the height of the screen */
+@media (max-height: 650px) {
+	.content-area {
+		top: 400px;
+	}
+}
+@media (max-height: 800px) {
+	.content-area {
+		top: 500px;
+	}
+}
+/* for margin before the footer */
+#last-content {
+	margin-bottom: 40px;
+}

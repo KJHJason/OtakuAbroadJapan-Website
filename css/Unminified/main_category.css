@@ -1,0 +1,69 @@
+/* to hide sub-category links when screen width is below 1200px */
+@media (max-width: 1199px) {
+	.hide-xl {
+		display: none;
+	}
+}
+/* for the paragraph (tip for the user) to get rid of the margin from the main_category_font.css */
+#rngTip {
+	margin: 0;
+}
+/* for sub-category link anchor tags */
+.buttonanimate {
+	color: #0d6efd;
+	/* to set the colour of the arrow and the text to blue */
+	font-size: 20px;
+	transition: all 0.4s;
+	/* transition of 0.4s to ensure smooth animation */
+}
+/* for the anchor tags text */
+.buttonanimate span {
+  text-decoration: underline;
+	display: inline-block;
+	/* ensures that the text and the double arrow will be displayed inline together with the sub category link text */
+	position: relative;
+	/* ensures that the sub category link text will be relative to the button when hovered over */
+	transition: 0.1s;
+	/* transition of 0.1s to ensure smooth animation */;
+  margin: 4px;
+}
+/* for the double arrow symbol */
+.buttonanimate span:after {
+	content: '\00bb';
+	/* content for the double arrow symbol */
+	position: absolute;
+	/* fixes the arrow position after the span tag/at the end of the sub category link text */
+	opacity: 0;
+	/* opacity of zero to hide it before hover */
+	top: 0;
+	right: -20px;
+	/* ensure that it is 20px to the right of the text inside span so that when it appears, it will not appear from inside the text */
+	transition: 0.1s;
+	/* transition of 0.1s to ensure smooth animation */;
+}
+/* makes the text go to the right upon hover */
+.buttonanimate:hover span {
+	padding-right: 25px;
+}
+/* for the arrow to appear when hovering over it */
+.buttonanimate:hover span:after {
+	opacity: 1;
+	right: 0;
+	/* resets the right css from the .buttonanimate span:after css to make the double arrow symbol go to left upon hover instead of to the right */;
+}
+/* for the sub category links to turn its colour to white */
+.buttonanimate:hover {
+	color: #fff;
+}
+/* to resize the bootstrap 5 cards to suit the screen width */
+@media (max-width: 1200px) {
+	.card-size {
+		width: 95% !important;
+		margin: auto;
+	}
+}
+@media (max-width: 576px) {
+	.card-size {
+		width: 90% !important;
+	}
+}

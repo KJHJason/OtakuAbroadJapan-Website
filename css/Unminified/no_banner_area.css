@@ -1,0 +1,13 @@
+.content-area {
+	position: relative;
+	/* makes it relative to the sticky navbar */
+	top: 150px;
+	/* displaces the content area by 150px from the top */
+	background: #000;
+	height: 100%;
+	width: 100%;
+}
+/* for margin before the footer */
+#last-content {
+	margin-bottom: 20px;
+}

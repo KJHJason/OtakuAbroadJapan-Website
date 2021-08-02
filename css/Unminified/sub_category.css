@@ -1,0 +1,175 @@
+/* for breadcrumbs */
+ul.breadcrumb {
+	padding: 10px 16px;
+	list-style: none;
+	margin-top: 15px;
+	background-color: #000;
+	margin-left: 10px;
+}
+
+ul.breadcrumb li {
+	display: inline;
+	font-size: 1.5em;
+	color: #949494;
+}
+
+ul.breadcrumb li+li:before {
+	padding: 8px;
+	color: #fff;
+	content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+	color: #949494;
+	text-decoration: underline;
+}
+
+@media (max-width: 450px) {
+	.breadcrumb {
+		font-size: 0.8em;
+		margin-left: 0px;
+		text-align: left;
+	}
+}
+
+@media (max-width: 240px) {
+	.breadcrumb {
+		font-size: 4vw;
+	}
+}
+/* for table text colour and bg colour */
+table tr td {
+	color: #000;
+}
+
+table tr th {
+	color: #000;
+}
+
+table {
+	background-color: #fff;
+	font-size: 1.2em;
+	border-radius: 20px;
+}
+
+th,
+tr,
+td {
+	border: 2px solid black;
+}
+
+@media (max-width: 768px) {
+	table {
+		font-size: 1em;
+	}
+}
+/* for the content filtering system */
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	border: 0 !important;
+	background: #262626;
+	flex: 1;
+	padding: 0 .5em;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.6em;
+	font-family: serif;
+}
+
+.select {
+	margin: auto;
+	position: relative;
+	display: flex;
+	width: 40%;
+	height: 48px;
+	background: #262626;
+	overflow: hidden;
+	border-radius: 4px;
+}
+
+.select::after {
+	content: '\25BC';
+	position: absolute;
+	line-height: 3;
+	top: 0;
+	right: 0;
+	padding: 0 1em;
+	background: #949494;
+	cursor: pointer;
+	pointer-events: none;
+	transition: .25s all ease;
+}
+
+.select:hover::after {
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+	.select {
+		width: 90%;
+	}
+}
+
+@media (max-width: 768px) {
+	select {
+		font-size: 1em;
+	}
+}
+
+0
+/* to change tooltip colours in bootstrap 5 */
+.tooltip.show {
+	opacity: 1;
+}
+
+.tooltip-inner {
+	background-color: #fff;
+	box-shadow: 0px 0px 4px black;
+	color: #000;
+	opacity: 1;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+	border-top-color: #fff;
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+	border-bottom-color: #fff;
+}
+
+.tooltip.bs-tooltip-start .tooltip-arrow::before {
+	border-left-color: #fff;
+}
+
+.tooltip.bs-tooltip-end .tooltip-arrow::before {
+	border-right-color: #fff;
+}
+/* for the text with the tooltip applied */
+.tooltipcssstyle {
+	color: #fff;
+	text-decoration: underline;
+	cursor: default;
+}
+
+.tooltipcssstyle:hover {
+	transition: .5s;
+	color: #949494;
+}
+/* for the vtuber details list */
+.vtuberdetails {
+	list-style: none;
+	color: #fff;
+}
+
+#disqus_thread {
+	color: #fff !important;
+}

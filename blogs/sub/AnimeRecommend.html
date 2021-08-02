@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/navigationbar.min.css" />
+  <link rel="stylesheet" href="/css/sub_category.min.css" />
+  <link rel="stylesheet" href="/css/multimedia.min.css" />
+  <link rel="stylesheet" href="/css/fontimport.css" />
+  <link rel="stylesheet" href="/css/footer.min.css" />
+  <link rel="stylesheet" href="/css/loading.min.css" />
+  <link rel="stylesheet" href="/css/font_size.min.css" />
+  <link rel="stylesheet" href="/css/banner.min.css" />
+  <link rel="stylesheet" href="/css/YouTube_lazy_load.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/multimedia/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/multimedia/favicon-32x32.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <title>Anime Recommendations</title>
+  <!-- tags for SEO -->
+  <meta name="author" content="OtakuAbroadJapan" />
+  <meta name="description" content="Click here to find more about my anime recommendations!" />
+  <link rel="canonical" href="https://www.otakuabroadjapan.com/blogs/sub/AnimeRecommend" />
+  <!-- Facebook open graph meta tags -->
+  <meta property="og:title" content="Anime Recommendations | OtakuAbroadJapan" />
+  <meta property="og:description" content="Click here to find more about my anime recommendations!" />
+  <meta property="og:url" content="https://www.otakuabroadjapan.com/blogs/sub/AnimeRecommend" />
+  <meta property="og:image" content="https://www.otakuabroadjapan.com/multimedia/image_card/facebook/Tsuki_ga_kirei_cropped.png" />
+  <meta property="og:type" content="website" />
+  <!-- twitter card meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ImdratornicV2" />
+  <meta name="twitter:title" content="Anime Recommendations | OtakuAbroadJapan" />
+  <meta name="twitter:description" content="Click here to find more about my anime recommendations!" />
+  <meta name="twitter:image" content="https://www.otakuabroadjapan.com/multimedia/image_card/twitter/Tsuki_ga_kirei_cropped.png" />
+  <style>
+    #banner-area {
+      background-image: url(/multimedia/sub/AnimeRecommend/animerecommendbanner.webp);
+    }
+  </style>
+</head>
+<body>
+  <!-- navigation bar-->
+  <div>
+    <header>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="/"><img src="/multimedia/logo_transparent.webp" alt="OtakuAbroadJapan Logo" class="logo" /></a>
+        </div>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul class="ulnav">
+            <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+            <li><a href="/">Home</a></li>
+            <li><a href="../main/anime">Anime</a></li>
+            <li><a href="../main/music">Music</a></li>
+            <li><a href="../main/vtubers">Vtubers</a></li>
+            <li><a href="/rng">Random Generator</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li>
+              <form action="/search" method="get">
+                <input type="text" placeholder="Search..." name="q" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div id="banner-area"></div>
+  <!-- preloader html below -->
+  <div class="loading-screen">
+    <div class="loading-animation">
+      <img src="/multimedia/logo_transparent.webp" alt="OtakuAbroadJapan Logo" class="loading-logo" />
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+  <!-- content below -->
+  <div class="content-area">
+    <div class="wrapper">
+      <a id="button"></a> <!-- button for go to top feature -->
+      <div><small id="banner_credit">Banner Photo by <a href="https://unsplash.com/@mojaghrout?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Moujib Aghrout</a> on Unsplash</small></div>
+      <br />
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="../main/anime">Anime</a></li>
+          <li>Anime Recommendations</li>
+        </ul>
+        <h1>Anime That You Should Watch!</h1>
+        <p id="last_updated">Last updated: 2/7/2021</p>
+        <p>Disclaimer for the images used: <span class="underlineWarning">All images used here are not owned by OtakuAbroadJapan but are either screenshots of the anime or the official key visual from the anime.</span></p>
+        <h3>Select one of the main genres below to filter the recommendations list.</h3>
+        <div class="select">
+          <select id="contentFiltering" onchange="filterContent()">
+            <option selected value="all">All</option>
+            <option value="SF">Sci-fi</option>
+            <option value="R">Romance</option>
+            <option value="A">Action</option>
+            <option value="FM">Fantasy/Magic</option>
+            <option value="SoL">Slice of life</option>
+          </select>
+        </div>
+        <div class="R">
+          <h3 id="tsuki">Tsuki ga kirei (EN: As the Moon, So Beautiful) [Romance]</h3>
+          <img src="/multimedia/sub/AnimeRecommend/TsukiGaKirei.webp" alt="Tsuki Ga Kirei image scene" class="imgres" />
+          <p>Tsuki ga Kirei or "As the Moon, So Beautiful" in English, is an adolescent romance story. Some may find it quite relatable too! It is a romance story between an aspiring writer Kotarou Azumi and a track team member Akane Mizuno who both ended up in the same class. They were both initially strangers but several opportunities brought them together.</p>
+          <p>Personally, I think it is worth a watch! I find it especially wholesome to see the two characters experience love for the first time. You should give it a try if you like romance and/or wholesome anime!</p>
+          <h3>Trailer for Tsuki ga Kirei</h3>
+          <div class="embedyt-wrapper">
+            <div class="youtube-player" data-id="HoEFpyDHZzw">
+            </div>
+          </div>
+        </div>
+        <div class="R">
+          <h3>Plastic Memories [Romance]</h3>
+          <img src="/multimedia/sub/AnimeRecommend/plastic_memories.webp" alt="Plastic Memories image scene" class="imgres" />
+          <p>Plastic Memories revolves around a romance story between the main character Tsukasa Mizugaki and an android, Isla. It is set in a world where humanity has invented a highly advanced android or to put it simply, an advanced A.I. robot, which is referred to as a "Giftias" which is almost indistinguishable from a normal human being. However, they only have a maximum lifespan of 81,920 hours, or around nine years and four months. After their lifespan, they will have to be deactivated in order to avoid losing their memories and becoming a dangerous entity. Hence, the main characters are tasked as partners in the Terminal Service One to retrieve Giftias before their expiry date. Though in the process of it, they developed feelings for each other. However, nothing lasts forever as Isla's expiry date is near and Tsukasa has to come to terms with his feelings before then.</p>
+          <p>If you enjoy watching romance, this will definitely be worth a watch and please prepare some tissues as you might cry at the ending...</p>
+          <h3>Trailer for Plastic Memories</h3>
+          <div class="embedyt-wrapper">
+            <div class="youtube-player" data-id="vk6mg74R5Ek">
+            </div>
+          </div>
+        </div>
+        <div class="SF">
+          <h3 id="vivy">Vivy: Fluorite Eye's Song [Sci-fi]</h3>
+          <img src="/multimedia/sub/AnimeRecommend/Vivy2.webp" alt="Vivy Ep 1 screenshot" class="imgres" />
+          <p>Vivy: Fluorite Eye's Song is an anime about AIs. These AIs are sustained by a single word which is "Mission". However, 100 years later, a war between AIs and Humanity will happen on April 11, 2161, and the main characters Vivy and Matsumoto are tasked to destroy AIs before that happens. To do that, Matsumoto is an AI from the future when the war broke out and time travelled 100 years back in time and met Vivy to carry out the "Singularity" project.</p>
+          <p>This anime is definitely worth a watch if you are into the famous movie, Terminator and the game, Detroit: Become Human. The anime has a similar concept to those two movies and games. The songs in the anime are also quite good! Additionally, be warned when watching the anime, it can get quite bloody.</p>
+          <h3>Trailer for Vivy: Fluorite Eye's Song</h3>
+          <div class="embedyt-wrapper">
+            <div class="youtube-player" data-id="t3IHpQZHPFY">
+            </div>
+          </div>
+        </div>
+        <div class="FM">
+          <h3>Irozuku Sekai no Ashita kara (EN: Iroduku: The World in Colors) [Fantasy/Magic]</h3>
+          <img src="/multimedia/sub/AnimeRecommend/Iroduku.webp" alt="Iroduku image scene" class="imgres" />
+          <p>Iroduku is an anime set in a world where there are magic that some people can use freely. The others are able to use magic as well but they will have to purchase a small bottle filled with magic dust made by those who can use magic freely. So... the main character, Hitomi Tsukishiro has colour blindness and was sent 60 years back into the past to the year 2018 by her grandmother.</p>
+          <p>This anime is actually worth a watch, the main premise is about her grandmother sending her back in time to meet her when she was in high school. Her grandmother wanted her to make friends and experience youth to the fullest and so she sent Hitomi back into the year 2018. If you like time travelling movies, drama, and some elements of romance, you should definitely give it a try!</p>
+          <h3>Trailer for Iroduku</h3>
+          <div class="embedyt-wrapper">
+            <div class="youtube-player" data-id="uXBvcLemyG4">
+            </div>
+          </div>
+        </div>
+        <div class="FM">
+          <h3>Sayonara no Asa ni Yakusoku no Hana wo Kazarou (EN: Maquia: When the Promised Flower Blooms) [Fantasy]</h3>
+          <img src="/multimedia/sub/AnimeRecommend/Maquia.webp" alt="Maquia image scene" class="imgres" />
+          <p>The anime, Maquia: When the Promised Flower Blooms, revolves around Maquia, the main character for the anime. Maquia is a member of a special race called the Iorph which are mystical beings who can live for hundreds of years. They would usually avoid humanity as it could stir up troubles within the Iorph community. However, the power-hungry kindom of Mezarte invades the homeland of Iorph and wanted to take away a selected few females of the Iorph community. They wanted to produce a hybrid of human and Iorph offspring to gain immortality. Maquia on the other hand was in the tower and was caught on a berserk Renato (A dragon basically) and stumbled onto a distant forest. She then finds a baby in a destroyed village and decided to take him in and named him Ariel.</p>
+          <p>This anime will make you cry so prepare some tissues beside you. This anime is definitely worth a watch, and do note it is a movie and has a slow pace at the start. However, do watch till the end as the ending is the one that almost made me cried. It is basically an anime movie about a young girl who adopted a baby and struggles in life. Since Maquia is an Iorph who will live for hundreds of years, the adopted baby, Ariel is a human and will perish before her. You can guess where this is going but the movie is definitely worth a shot.</p>
+          <h3>Trailer for Maquia</h3>
+          <div class="embedyt-wrapper">
+            <div class="youtube-player" data-id="fi1gmq0CwcA">
+            </div>
+          </div>
+        </div>
+        <div class="SoL">
+          <h3>Comic Girls [Slice of life]</h3>
+          <img src="/multimedia/sub/AnimeRecommend/comic_girls.webp" alt="Image of the anime Comic Girls" class="imgres" />
+          <p>Comic Girls revolves around mainly Kaoruko Moeta who also goes by her pen name, "Kaos", who is a young manga artist. Her manga was not well received by the others and she was depressed about it. Kaoruko Moeta also has a timid personality but was determined to draw a manga that would become popular. During a call with her editor, she was offered to move into a dormitory for female manga artists. She would then accept the offer and meet the other residents: Tsubasa Katsuki, Ruki Irokawa, Koyume Koizuka. They would then help one another out and improve their manga drawing skills.</p>
+          <p>This anime is wholesome as it revolves Kaoruko Moeta who is trying to get her manga serialised and make a debut but life is tough. This anime also has comedy in it so if you are into slice of life and comedy, you should definitely watch this!</p>
+          <h3>Trailer for Comic Girls</h3>
+          <div class="embedyt-wrapper">
+            <div class="youtube-player" data-id="iWIpU_htE0Y">
+            </div>
+          </div>
+        </div>
+        <div class="SoL">
+          <h3>Yuru Camp (EN: Laid-Back Camp) [Slice of life]</h3>
+          <img src="/multimedia/sub/AnimeRecommend/Yuru-Camp.webp" alt="Image of Yuru Camp" class="imgres" />
+          <p>Yuru Camp is a very peaceful anime that is about a group of girls camping at different campsites in Japan. There are five main characters who are Rin, Nadeshiko, Aoi, Chiaki, and Ena. Initially, Rin would usually camp alone at the base of Mount Fuji. However, Nadeshiko was lost and stumbled across Rin and had no choice but to take refuge at her campsite. Nadeshiko eventually got interested in camping as well from her experience with Rin and ponder about the possibility of another camping trip together. It turns out that Rin is a student from the same school that Nadeshiko enrolled in. These two then interacted with each other in school and Nadeshiko eventually joined the outdoor activities club and met Aoi and Chiaki. Ena is a friend of Nadeshiko who eventually joined her in camping.</p>
+          <p>This anime would provide tips on camping as it is targeted towards people who like to camp. However, if you like wholesome anime or is into camping, you can definitely give this a shot.</p>
+          <h3>Trailer for Yuru Camp</h3>
+          <div class="embedyt-wrapper">
+            <div class="youtube-player" data-id="vpH42sJ8t9c">
+            </div>
+          </div>
+        </div>
+        <div class="SF">
+          <h3>Kanata no Astra (EN: Astra Lost in Space) [Sci-fi]</h3>
+          <img src="/multimedia/sub/AnimeRecommend/KanataNoAstra.webp" alt="Kanata No Astra scene" class="imgres" />
+          <p>Kanata no Astra is set in the year 2063 where space travel is feasible and commercially available. There are 9 main characters who are high school students about to go on a camping trip to the distant planet, McPa. However, upon reaching their campsite, a strange sphere, identical to a black hole, would suck them and they would end up somewhere lost in space. They then stumbled upon an unused spaceship in hopes to travel back to their home planet. Of course, there is a catch to this anime, someone among them caused the strange sphere to appear in an attempt to kill them somewhere in deep space.</p>
+          <p>This anime is bascially similar to the game, "Among Us", and if you like the game concept, you would definitely like this anime.</p>
+          <h3>Trailer for Kanata no Astra</h3>
+          <div class="embedyt-wrapper">
+            <div class="youtube-player" data-id="wD9o_8UjOvg">
+            </div>
+          </div>
+        </div>
+        <div class="A">
+          <h3>Aldnoah.Zero [Action]</h3>
+          <img src="/multimedia/sub/AnimeRecommend/AldnoahZero.webp" alt="Aldnoah.Zero fanart" class="imgres" />
+          <p>This anime is about humanity who left Earth and lived on Mars that had advanced technology called, "Aldnoah", using a hypergate discovered on the moon which allowed teleportation to Mars. They then founded the Vers Empire of Mars and declared war against the Terrans (basically Earthlings in another word). However, a battle on the moon later called "Heaven's Fall", caused the hypergate to explode and destroyed the moon, leading the two planets to establish an uneasy ceasefire. Fifteen years later, the main character, Inaho Kaizuka who is a high school student witnesses the plotted assassination of the Vers Empire's Princess Asseylum Vers Allusiam, who visited Earth in hopes to repair the relationship between the empire and the Terrans. War then broke out.</p>
+          <p>This anime story is quite good and has good original soundtracks in it. Definitely worth a watch, especially if you are into mecha anime and action.</p>
+          <h3>Trailer for Aldnoah.Zero</h3>
+          <div class="embedyt-wrapper">
+            <div class="youtube-player" data-id="D6XOSJyJtk8">
+            </div>
+          </div>
+        </div>
+        <div class="A">
+          <h3>Utawarerumono: Itsuwari no Kamen [Action]</h3>
+          <img src="/multimedia/sub/AnimeRecommend/Itsuwari_no_kamen.webp" alt="Utawarerumono: Itsuwari no Kamen game key visual" class="imgres" />
+          <p>Do take note that Utawarerumono: Itsuwari no Kamen is the second season of the Utawarerumono series. Hence, I recommend that you watch the first season which is "Utawarerumono" from the year 2006 which is relatively an old anime. The first season can get quite boring as it is slow-paced but it is worth the wait! Now I will get to the synopsis of the anime, Utawarerumono: Itsuwari no Kamen, it revolves around the main character, Haku who was waking up cold and alone in the woods. He suffers from amnesia and was found by Kuon, a young girl with animal ears and a tail. She then brings him back to a nearby town and named him "Haku" as he does not remember his name. The story continues as Kuon and Haku ventured off to the capital of Yamato. Haku will then work to solve mysteries and try to stop a war from erupting among the nearby countries.</p>
+          <p>This anime is mainly about action and drama, so if you are into action and drama movies, you would definitely love this anime!</p>
+          <h3>Trailer for Utawarerumono: Itsuwari no Kamen</h3>
+          <div class="embedyt-wrapper">
+            <div class="youtube-player" data-id="Z3xqwyVfSOQ">
+            </div>
+          </div>
+        </div>
+        <div id="last-content">
+          <div class="SF">
+            <h3>Steins;Gate [Sci-fi]</h3>
+            <img src="/multimedia/sub/AnimeRecommend/SteinsGate.webp" alt="Stein;Gate key visual" class="imgres" />
+            <p>Steins;Gate revolves around Rintarou Okabe, a self-proclaimed mad scientist. He would usually conduct experiments with his group of friends in his rented room in an old building in Akihabara. He and his friends then accidentally made a time machine contraption that allowed him to send a "D-Mail", abbreviated for DeLorean Mail, which allowed Okabe to time travel with his memory intact. From time travelling, Okabe will face various troubles for sending a D-Mail with an organisation.</p>
+            <p>If you like time travelling movies/anime, you would definitely want to give it a try. Although the story can be quite slow to pick up its pace, it is definitely worth the time to find out the ending of the anime.</p>
+            <h3>Trailer for Steins;Gate</h3>
+            <div class="embedyt-wrapper">
+              <div class="youtube-player" data-id="27OZc-ku6is">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Anime</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="AnimeSpots">Anime Spots</a></li>
+                <li><a href="AnimeRecommend">Anime Recommendations</a></li>
+                <li><a href="AnimeEvents">Anime Events</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Music</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="Anisong">Anisong</a></li>
+                <li><a href="Ost">Anime OST</a></li>
+                <li><a href="Musician">Musician</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Vtubers</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="Hololive">Hololive</a></li>
+                <li><a href="Nijisanji">NIJISANJI</a></li>
+                <li><a href="IndependentVtubers">Independent Vtubers</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Random Generator</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="/rng#animerng">Anime</a></li>
+                <li><a href="/rng#musicrng">Music</a></li>
+                <li><a href="/rng#vtubersrng">Vtubers</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Social Links</h4>
+              <div class="social-links">
+                <a href="https://twitter.com/ImdratornicV2" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/dratornic/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/KJHJason" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <p id="copyright">&copy; 2021 OtakuAbroadJapan. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="/js/YouTube_lazy_load.min.js"></script>
+  <script src="/js/main.min.js"></script>
+  <script src="/js/GoToTop.min.js"></script>
+  <script src="/js/anime_content_filter.min.js"></script>
+  <script src="/js/Disqus/AnimeSpots.js"></script>
+</body>
+</html>

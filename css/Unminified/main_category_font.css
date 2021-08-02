@@ -1,0 +1,115 @@
+.content-area h1 {
+	font-family: montserratbold;
+	letter-spacing: 4px;
+	/* the spacing between the characters of a block of text. */
+	font-size: 3em;
+	margin: 0;
+	color: #fff;
+	padding: 30px 50px;
+}
+
+.content-area h3 {
+	font-family: serif;
+	letter-spacing: 4px;
+	/* the spacing between the characters of a block of text. */
+	font-size: 2em;
+	margin: 0;
+	color: #fff;
+}
+
+.content-area p {
+	line-height: 1.6;
+	color: #fff;
+	font-size: 1.33em;
+	margin: 20px 0;
+}
+/* for the bootstrap 5 cards text */
+.card-font {
+	line-height: 1.6;
+	font-size: 1.25em !important;
+	color: #000 !important;
+	text-align: left !important;
+}
+
+.card_link_font {
+	font-size: 1em !important;
+}
+/* to align the text to the left if needed */
+.alignleft {
+	text-align: left;
+	margin-bottom: 20px !important;
+}
+/* for responsive font size */
+@media (max-width: 1200px) {
+	.content-area p {
+		margin: 20px 10%;
+	}
+}
+
+@media (max-width: 768px) {
+	.content-area h1 {
+		font-size: 2em;
+		padding: 30px 5%;
+	}
+
+	.content-area h3 {
+		font-size: 1.6em;
+		padding: 30px 5%;
+	}
+
+	.content-area p {
+		font-size: 1.2em;
+		margin: 5%;
+	}
+
+	.card-font {
+		font-size: 0.9em !important;
+	}
+
+	.card_link_font {
+		font-size: 0.8em !important;
+	}
+}
+
+@media (max-width: 576px) {
+	.content-area h3 {
+		font-size: 1.4em;
+	}
+
+	.card-font,
+	.card_link_font {
+		font-size: 1em !important;
+	}
+}
+
+@media (max-width: 350px) {
+	.content-area h1 {
+		font-size: 8vw;
+	}
+
+	.content-area h3 {
+		font-size: 6vw;
+	}
+
+	.content-area p {
+		font-size: 5vw;
+	}
+
+	.card-font,
+	.card_link_font {
+		font-size: 5vw !important;
+	}
+}
+/* for banner photo crediting */
+#banner_credit {
+	float: right;
+	color: #fff;
+	padding: 10px 20px 0 0;
+	margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+	#banner_credit {
+		font-size: 0.6em;
+	}
+}
