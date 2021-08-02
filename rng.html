@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/navigationbar.min.css" />
+  <link rel="stylesheet" href="css/cards_and_button.min.css" />
+  <link rel="stylesheet" href="css/multimedia.min.css" />
+  <link rel="stylesheet" href="css/fontimport.css" />
+  <link rel="stylesheet" href="css/footer.min.css" />
+  <link rel="stylesheet" href="css/loading.min.css" />
+  <link rel="stylesheet" href="css/banner.min.css" />
+  <link rel="stylesheet" href="css/font_size.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="multimedia/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="multimedia/favicon-32x32.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <title>Random Generator</title>
+  <!-- tags for SEO -->
+  <meta name="author" content="OtakuAbroadJapan" />
+  <meta name="description" content="Do not know where to start? Fret not! Scroll down to find all three random generators that will generate anime, Japanese music, and vtubers respectively!" />
+  <link rel="canonical" href="https://www.otakuabroadjapan.com/rng" />
+  <!-- Facebook open graph meta tags -->
+  <meta property="og:title" content="Random Generator | OtakuAbroadJapan" />
+  <meta property="og:description" content="Do not know where to start? Use this website to get started!" />
+  <meta property="og:url" content="https://www.otakuabroadjapan.com/rng" />
+  <meta property="og:image" content="https://www.otakuabroadjapan.com/multimedia/image_card/facebook/logo.png" />
+  <meta property="og:type" content="website" />
+  <!-- twitter card meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ImdratornicV2" />
+  <meta name="twitter:title" content="Random Generator | OtakuAbroadJapan" />
+  <meta name="twitter:description" content="Do not know where to start? Use this website to get started!" />
+  <meta name="twitter:image" content="https://www.otakuabroadjapan.com/multimedia/image_card/twitter/logo.png" />
+  <style>
+    #banner-area {
+      background-image: url(multimedia/main/rng/rngbanner.webp);
+    }
+  </style>
+</head>
+<body>
+  <!-- navigation bar-->
+  <div>
+    <header>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="/"><img src="multimedia/logo_transparent.webp" alt="OtakuAbroadJapan Logo" class="logo" /></a>
+        </div>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul class="ulnav">
+            <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+            <li><a href="/">Home</a></li>
+            <li><a href="blogs/main/anime">Anime</a></li>
+            <li><a href="blogs/main/music">Music</a></li>
+            <li><a href="blogs/main/vtubers">Vtubers</a></li>
+            <li><a class="active" href="rng">Random Generator</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li>
+              <form action="search" method="get">
+                <input type="text" placeholder="Search..." name="q" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div id="banner-area"></div>
+  <!-- preloader html below -->
+  <div class="loading-screen">
+    <div class="loading-animation">
+      <img src="multimedia/logo_transparent.webp" alt="OtakuAbroadJapan Logo" class="loading-logo" />
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+  <!-- content below -->
+  <div class="content-area">
+    <div class="wrapper">
+      <a id="button"></a> <!-- button for go to top feature -->
+      <div><small id="banner_credit">Banner Photo by <a href="https://unsplash.com/@agk42?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Alex Knight</a> on Unsplash</small></div>
+      <br />
+      <div class="container" id="last-content">
+        <h1>Do not know where to start?</h1>
+        <p>Fret not! Scroll down to find all three random generators that will generate anime, Japanese music, and vtubers respectively! Additionally, the generator will generate based on a list of anime, Japanese music, and vtubers that I have recommended on this website. It is not based on all the anime, Japanese music, and vtubers that are available on the internet.</p>
+        <p>Notes for embedded Spotify tracks/albums: <span class="underlineWarning">Please reduce your computer volume when playing the embedded spotify tracks as it can get quite loud.</span></p>
+        <p>Disclaimer for the images used: <span class="underlineWarning">All images used here are not owned by OtakuAbroadJapan. Please refer to their respective credits on the respective blog webpage or the credits below the generated images.</span></p>
+        <div id="animerng">
+          <h2>Random Anime Generator</h2>
+          <button onclick="getrandomAnime()" class="buttonstyling">Generate</button>
+          <h3>Generated Anime: <span id="GeneratedAnime"></span></h3>
+          <div id="animeimagehidden" hidden>
+            <img src="" id="animeimage" alt="Generated anime image" class="imgres" />
+          </div>
+          <p id="animedescription" hidden></p>
+        </div>
+        <div id="musicrng">
+          <h2>Random Japanese Music Generator</h2>
+          <button onclick="getrandomMusic()" class="buttonstyling">Generate</button>
+          <h3>Generated Japanese Music: <span id="GeneratedMusic"></span></h3>
+          <div id="musicimagehidden" hidden>
+            <img src="" id="musicimage" alt="Generated music image" class="imgsong" />
+          </div>
+          <small class="multi_credit" id="musiccredit" hidden></small>
+          <p id="musicdescription" hidden></p>
+          <p id="spotifylink" hidden></p>
+          <div id="musicembedspotify" hidden><iframe id="embedspotifygenerate" src="" class="spotifyalbumres" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+        </div>
+        <div id="vtubersrng">
+          <h2>Random Vtuber Generator</h2>
+          <button onclick="getrandomVtuber()" class="buttonstyling">Generate</button>
+          <h3>Generated Vtuber: <span id="GeneratedVtuber"></span></h3>
+          <div id="vtuberimagehidden" hidden>
+            <img src="" id="vtuberimage" alt="Generated anime image" class="imgprofile" />
+          </div>
+          <small class="multi_credit" id="vtubercredit" hidden></small>
+          <p id="vtuberdescription" hidden></p>
+          <p id="channel" hidden></p>
+        </div>
+      </div>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Anime</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="blogs/sub/AnimeSpots">Anime Spots</a></li>
+                <li><a href="blogs/sub/AnimeRecommend">Anime Recommendations</a></li>
+                <li><a href="blogs/sub/AnimeEvents">Anime Events</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Music</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="blogs/sub/Anisong">Anisong</a></li>
+                <li><a href="blogs/sub/Ost">Anime OST</a></li>
+                <li><a href="blogs/sub/Musician">Musician</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Vtubers</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="blogs/sub/Hololive">Hololive</a></li>
+                <li><a href="blogs/sub/Nijisanji">NIJISANJI</a></li>
+                <li><a href="blogs/sub/IndependentVtubers">Independent Vtubers</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Random Generator</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="rng#animerng">Anime</a></li>
+                <li><a href="rng#musicrng">Music</a></li>
+                <li><a href="rng#vtubersrng">Vtubers</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Social Links</h4>
+              <div class="social-links">
+                <a href="https://twitter.com/ImdratornicV2" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/dratornic/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/KJHJason" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <p id="copyright">&copy; 2021 OtakuAbroadJapan. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/GoToTop.min.js"></script>
+  <script src="js/animegenerator.min.js"></script>
+  <script src="js/musicgenerator.min.js"></script>
+  <script src="js/vtubersgenerator.min.js"></script>
+</body>
+</html>

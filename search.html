@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/navigationbar.min.css" />
+  <link rel="stylesheet" href="css/no_banner_area.min.css" />
+  <link rel="stylesheet" href="css/font_size.min.css" />
+  <link rel="stylesheet" href="css/fontimport.css" />
+  <link rel="stylesheet" href="css/footer.min.css" />
+  <link rel="stylesheet" href="css/loading.min.css" />
+  <link rel="stylesheet" href="css/search.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="multimedia/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="multimedia/favicon-32x32.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <title>Search Results...</title>
+  <!-- meta tags for SEO -->
+  <meta name="author" content="OtakuAbroadJapan" />
+  <meta name="description" content="Search results for..." />
+  <meta name="robots" content="noindex,nofollow" />
+  <!-- Facebook open graph meta tags -->
+  <meta property="og:title" content="Search Results | OtakuAbroadJapan" />
+  <meta property="og:description" content="Search results" />
+  <meta property="og:url" content="https://www.otakuabroadjapan.com/search" />
+  <meta property="og:image" content="https://www.otakuabroadjapan.com/multimedia/image_card/facebook/logo.png" />
+  <meta property="og:type" content="website" />
+  <!-- twitter card meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ImdratornicV2" />
+  <meta name="twitter:title" content="Search Results | OtakuAbroadJapan" />
+  <meta name="twitter:description" content="Search results" />
+  <meta name="twitter:image" content="https://www.otakuabroadjapan.com/multimedia/image_card/twitter/logo.png" />
+  <script async src="https://cse.google.com/cse.js?cx=6ec1ff61a6b116bcc"></script>
+</head>
+<body>
+  <!-- navigation bar-->
+  <div>
+    <header>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="/"><img src="multimedia/logo_transparent.webp" alt="OtakuAbroadJapan Logo" class="logo" /></a>
+        </div>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul class="ulnav">
+            <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+            <li><a href="/">Home</a></li>
+            <li><a href="blogs/main/anime">Anime</a></li>
+            <li><a href="blogs/main/music">Music</a></li>
+            <li><a href="blogs/main/vtubers">Vtubers</a></li>
+            <li><a href="rng">Random Generator</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li>
+              <form action="search" method="get">
+                <input type="text" placeholder="Search..." name="q" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <!-- preloader html below -->
+  <div class="loading-screen">
+    <div class="loading-animation">
+      <img src="multimedia/logo_transparent.webp" alt="OtakuAbroadJapan Logo" class="loading-logo" />
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+  <!-- content below -->
+  <div class="content-area">
+    <div class="wrapper">
+      <a id="button"></a> <!-- button for go to top feature -->
+      <div class="container" id="last-content">
+        <div class="searchresults">
+          <h1>Search results: </h1>
+          <h3>You searched for: "<span id="searched"></span>"</h3>
+        </div>
+        <div id="searchstyle">
+          <div id="googlesearchfunct" class="gcse-search"></div>
+        </div>
+      </div>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Anime</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="blogs/sub/AnimeSpots">Anime Spots</a></li>
+                <li><a href="blogs/sub/AnimeRecommend">Anime Recommendations</a></li>
+                <li><a href="blogs/sub/AnimeEvents">Anime Events</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Music</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="blogs/sub/Anisong">Anisong</a></li>
+                <li><a href="blogs/sub/Ost">Anime OST</a></li>
+                <li><a href="blogs/sub/Musician">Musician</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Vtubers</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="blogs/sub/Hololive">Hololive</a></li>
+                <li><a href="blogs/sub/Nijisanji">NIJISANJI</a></li>
+                <li><a href="blogs/sub/IndependentVtubers">Independent Vtubers</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Random Generator</h4>
+              <ul>
+                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
+                <li><a href="rng#animerng">Anime</a></li>
+                <li><a href="rng#musicrng">Music</a></li>
+                <li><a href="rng#vtubersrng">Vtubers</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Social Links</h4>
+              <div class="social-links">
+                <a href="https://twitter.com/ImdratornicV2" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/dratornic/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/KJHJason" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <p id="copyright">&copy; 2021 OtakuAbroadJapan. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/GoToTop.min.js"></script>
+  <script src="js/search.min.js"></script>
+</body>
+</html>

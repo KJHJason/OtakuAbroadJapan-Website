@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /tmp/
+Disallow: /junk/
+Sitemap: https://www.otakuabroadjapan.com/sitemap.xml
