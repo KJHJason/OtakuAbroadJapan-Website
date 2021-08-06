@@ -1,26 +1,4 @@
 <!DOCTYPE html>
-<!--
-██╗░░██╗██╗░░░  ░██╗░░░░░░░██╗██╗░░██╗██╗░░░██╗  ░█████╗░██████╗░███████╗  ██╗░░░██╗░█████╗░██╗░░░██╗
-██║░░██║██║░░░  ░██║░░██╗░░██║██║░░██║╚██╗░██╔╝  ██╔══██╗██╔══██╗██╔════╝  ╚██╗░██╔╝██╔══██╗██║░░░██║
-███████║██║░░░  ░╚██╗████╗██╔╝███████║░╚████╔╝░  ███████║██████╔╝█████╗░░  ░╚████╔╝░██║░░██║██║░░░██║
-██╔══██║██║██╗  ░░████╔═████║░██╔══██║░░╚██╔╝░░  ██╔══██║██╔══██╗██╔══╝░░  ░░╚██╔╝░░██║░░██║██║░░░██║
-██║░░██║██║╚█║  ░░╚██╔╝░╚██╔╝░██║░░██║░░░██║░░░  ██║░░██║██║░░██║███████╗  ░░░██║░░░╚█████╔╝╚██████╔╝
-╚═╝░░╚═╝╚═╝░╚╝  ░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝░░░╚═╝░░░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝  ░░░╚═╝░░░░╚════╝░░╚═════╝░
-
-██╗░░░░░░█████╗░░█████╗░██╗░░██╗██╗███╗░░██╗░██████╗░  ░█████╗░████████╗  ████████╗██╗░░██╗███████╗
-██║░░░░░██╔══██╗██╔══██╗██║░██╔╝██║████╗░██║██╔════╝░  ██╔══██╗╚══██╔══╝  ╚══██╔══╝██║░░██║██╔════╝
-██║░░░░░██║░░██║██║░░██║█████═╝░██║██╔██╗██║██║░░██╗░  ███████║░░░██║░░░  ░░░██║░░░███████║█████╗░░
-██║░░░░░██║░░██║██║░░██║██╔═██╗░██║██║╚████║██║░░╚██╗  ██╔══██║░░░██║░░░  ░░░██║░░░██╔══██║██╔══╝░░
-███████╗╚█████╔╝╚█████╔╝██║░╚██╗██║██║░╚███║╚██████╔╝  ██║░░██║░░░██║░░░  ░░░██║░░░██║░░██║███████╗
-╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░  ╚═╝░░╚═╝░░░╚═╝░░░  ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝
-
-░██████╗░█████╗░██╗░░░██╗██████╗░░█████╗░███████╗  ░█████╗░░█████╗░██████╗░███████╗░█████╗░
-██╔════╝██╔══██╗██║░░░██║██╔══██╗██╔══██╗██╔════╝  ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗
-╚█████╗░██║░░██║██║░░░██║██████╔╝██║░░╚═╝█████╗░░  ██║░░╚═╝██║░░██║██║░░██║█████╗░░╚═╝███╔╝
-░╚═══██╗██║░░██║██║░░░██║██╔══██╗██║░░██╗██╔══╝░░  ██║░░██╗██║░░██║██║░░██║██╔══╝░░░░░╚══╝░
-██████╔╝╚█████╔╝╚██████╔╝██║░░██║╚█████╔╝███████╗  ╚█████╔╝╚█████╔╝██████╔╝███████╗░░░██╗░░
-╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚═╝░╚════╝░╚══════╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝░░░╚═╝░░
--->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -76,7 +54,6 @@
             <span></span>
           </label>
           <ul class="ulnav">
-            <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
             <li><a href="/">Home</a></li>
             <li><a href="blogs/main/anime">Anime</a></li>
             <li><a href="blogs/main/music">Music</a></li>
@@ -84,7 +61,6 @@
             <li><a href="rng">Random Generator</a></li>
             <li><a class="active" href="contact">Contact</a></li>
             <li>
-              <!-- action attribute does not have .html as my htaccess code will strip the .html from the url -->
               <form action="/search" method="get">
                 <input type="text" placeholder="Search..." name="q" required />
                 <button type="submit"><i class="fa fa-search"></i></button>
@@ -95,7 +71,7 @@
       </div>
     </header>
   </div>
-  <!-- preloader html below -->
+  <!-- loading screen html below -->
   <div class="loading-screen">
     <div class="loading-animation">
       <img src="multimedia/logo_transparent.webp" alt="OtakuAbroadJapan Logo" class="loading-logo" />
@@ -115,7 +91,6 @@
           </div>
           <!-- bootstrap 5 form with a mix of my css and html -->
           <div class="col-xl-6" id="formwidth">
-            <!-- form action will go to processing.php but in the action below, .php is excluded as my htaccess code will strip the .php in the url -->
             <form action="processing" id="contact_form" novalidate method="post">
               <div class="form-group alignleft">
                 <label for="name" class="labeltext">Name:</label>
@@ -162,7 +137,6 @@
             <div class="footer-col">
               <h4>Anime</h4>
               <ul>
-                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
                 <li><a href="blogs/sub/AnimeSpots">Anime Spots</a></li>
                 <li><a href="blogs/sub/AnimeRecommend">Anime Recommendations</a></li>
                 <li><a href="blogs/sub/AnimeEvents">Anime Events</a></li>
@@ -171,7 +145,6 @@
             <div class="footer-col">
               <h4>Music</h4>
               <ul>
-                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
                 <li><a href="blogs/sub/Anisong">Anisong</a></li>
                 <li><a href="blogs/sub/Ost">Anime OST</a></li>
                 <li><a href="blogs/sub/Musician">Musician</a></li>
@@ -180,7 +153,6 @@
             <div class="footer-col">
               <h4>Vtubers</h4>
               <ul>
-                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
                 <li><a href="blogs/sub/Hololive">Hololive</a></li>
                 <li><a href="blogs/sub/Nijisanji">NIJISANJI</a></li>
                 <li><a href="blogs/sub/IndependentVtubers">Independent Vtubers</a></li>
@@ -189,7 +161,6 @@
             <div class="footer-col">
               <h4>Random Generator</h4>
               <ul>
-                <!-- anchor tags href does not have .html as my htaccess code will strip the .html from the url -->
                 <li><a href="rng#animerng">Anime</a></li>
                 <li><a href="rng#musicrng">Music</a></li>
                 <li><a href="rng#vtubersrng">Vtubers</a></li>
