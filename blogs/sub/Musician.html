@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- bootstrap 5 cdn css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- my css -->
   <link rel="stylesheet" href="/css/navigationbar.min.css" />
   <link rel="stylesheet" href="/css/sub_category.min.css" />
   <link rel="stylesheet" href="/css/multimedia.min.css" />
@@ -14,11 +16,12 @@
   <link rel="stylesheet" href="/css/font_size.min.css" />
   <link rel="stylesheet" href="/css/banner.min.css" />
   <link rel="stylesheet" href="/css/YouTube_lazy_load.min.css" />
+  <!-- two cdn css for the logos on the footer and the back to top button -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <!-- link tags for the favicon for all browsers including safari -->
   <link rel="apple-touch-icon" sizes="180x180" href="/multimedia/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/multimedia/favicon-32x32.png" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <title>Japanese Musicians</title>
   <!-- tags for SEO -->
   <meta name="author" content="OtakuAbroadJapan" />
   <meta name="description" content="Find out more here about some of my favourite Japanese musicians! They are Camellia, Kensuke Ushio, and more!" />
@@ -35,6 +38,9 @@
   <meta name="twitter:title" content="Japanese Musicians | OtakuAbroadJapan" />
   <meta name="twitter:description" content="Find out more here about some of my favourite Japanese musicians!" />
   <meta name="twitter:image" content="https://www.otakuabroadjapan.com/multimedia/image_card/twitter/Egoist_cropped.png" />
+  <!-- title for the html document -->
+  <title>Japanese Musicians</title>
+  <!-- embedded css for the banner image -->
   <style>
     #banner-area {
       background-image: url(/multimedia/sub/Musician/musicianbanner.webp) !important;
@@ -65,8 +71,9 @@
             <li><a href="/rng">Random Generator</a></li>
             <li><a href="/contact">Contact</a></li>
             <li>
+              <!-- action attribute does not have .html as my htaccess code will strip the .html from the url -->
               <form action="/search" method="get">
-                <input type="text" placeholder="Search..." name="q" />
+                <input type="text" placeholder="Search..." name="q" required />
                 <button type="submit"><i class="fa fa-search"></i></button>
               </form>
             </li>
@@ -84,7 +91,7 @@
     </div>
   </div>
   <!-- content below -->
-  <div class="content-area">
+  <div class="content-area" hidden>
     <div class="wrapper">
       <a id="button"></a> <!-- button for go to top feature -->
       <div><small id="banner_credit">Banner Photo by <a href="https://www.artstation.com/artwork/J92Qam" target="_blank">Tomoyuki Yamasaki</a> on ArtStation</small></div>
@@ -96,7 +103,7 @@
           <li>Musicians</li>
         </ul>
         <h1>Japanese Musicians You Should Listen To!</h1>
-        <p id="last_updated">Last updated: 22/6/2021</p>
+        <p id="last_updated">Last updated: June 22, 2021</p>
         <h3>Introduction</h3>
         <p>Here lie some of my personal favourite Japanese musicians. Although the definition of Japanese "musician" may vary from person to person, personally it basically refers to anybody who originates from Japan and makes music for a living.</p>
         <p>Here are some of my favourite Japanese musicians. Scroll down and take a look at some of the music that I like from various Japanese musicians. Note: <span class="underlineWarning">Please reduce your computer volume when playing the embedded Spotify tracks as it can get quite loud.</span></p>
@@ -109,49 +116,49 @@
         <p>Camellia whose real name is Masaya Oya (Japanese: 大箭将也; Oya Masaya) is a Japanese musician, born on September 28, 1992, is well known for his fast-paced music. He is very popular among rhythm gamers for having his music being hard to clear on rhythm games such as Osu!, Sound Voltex, and Robeats. His song mostly runs more than 200 BPM which makes his song difficult to clear on rhythm games. Fun fact: his song, <a href="https://open.spotify.com/track/3AtQwAbQ9c9KfSFBRah5i8?si=9f9264781ef94120" target="_blank">"M1LLI0N PP"</a> has an estimated of 24 genres and the BPM ranges from 125 to 234!</p>
         <p>Below are some of my personal favourites. You should definitely give his music a try, especially if you like bass heavy music or fast paced music.</p>
         <p>Spotify: <a href="https://open.spotify.com/artist/4bwIf0yXJf0F9AmOl2J78M?si=me6hwOT9S3qVQQXrqlsNlg&dl_branch=1" target="_blank">Camellia</a></p>
-        <iframe src="https://open.spotify.com/embed/track/6HBznW6Doe0w8WBazMavO5" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/6HBznW6Doe0w8WBazMavO5" loading="lazy" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
         <h3>Yunomi</h3>
         <img src="/multimedia/sub/Musician/Yunomi.webp" alt="Image of Yunomi" class="imgprofile" />
         <br />
         <small class="multi_credit"><a href="https://twitter.com/cy8erinfo/status/1135909127887106050" target="_blank">Portrait image</a> from @CY8ERinfo on Twitter.</small>
         <p>Yunomi (ゆのみ) is a DJ, lyricist, composer and arranger and has been active since 2015. He was born in Sapporo, Hokkaido, Japan. He would usually release music as a soloist or would invite other music artists to collaborate with him. He would also compose and write for other artists and groups too. He is also one of the more recent J-pop sensations to appear in the music industry, theming his songs around the concept of "cute". His music is heavily based on EDM, trap, and future bass or kawaii future bass.</p>
         <p>Spotify: <a href="https://open.spotify.com/artist/2j00CVYTPx6q9ANbmB2keb?si=B41l-4ZdQ42eEXqt3C5dlQ&dl_branch=1" target="_blank">Yunomi</a></p>
-        <iframe src="https://open.spotify.com/embed/track/15St0qWPnH4xKflV39vk28" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/15St0qWPnH4xKflV39vk28" loading="lazy" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
         <h3>Egoist</h3>
         <img src="/multimedia/sub/Musician/Egoist.webp" alt="Image of Egoist" class="imgprofile" />
         <br />
         <small class="multi_credit"><a href="https://www.artstation.com/artwork/3dXDdv" target="_blank">Portrait image</a> by Tomoyuki Yamasaki on ArtStation.</small>
         <p>Egoist is a music duo, originally created for the anime, Guilty Crown. However, they have continued to release music separately since then. Egoist (band) consists of Chelly (Vocal) and Ryo (Producer) and has been active since 2011. The main genre that Egoist focuses on is J-pop and has also made music for various anime such as Pyscho-Pass. Below are some of my personal favourites songs from Egoist.</p>
         <p>Spotify: <a href="https://open.spotify.com/artist/0k7JZhYS35IewiKNHW7KMj?si=_kYS6QF9Q0elIc_xxtNzQQ&dl_branch=1" target="_blank">Egoist</a></p>
-        <iframe src="https://open.spotify.com/embed/track/2fkSKbhD79K9JRFUSuhzk3" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/2fkSKbhD79K9JRFUSuhzk3" loading="lazy" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
         <h3>yanaginagi</h3>
         <img src="/multimedia/sub/Musician/YanagiNagi.webp" alt="Image of Nagi Yanagi" class="imgprofile" />
         <br />
         <small class="multi_credit"><a href="http://yanaginagi.net/profile/" target="_blank">Portrait image</a> from her <a href="http://yanaginagi.net/" target="_blank">official website</a>.</small>
         <p>Nagi Yanagi (Japanese: やなぎなぎ; Yanagi Nagi) or yanaginagi is a Jpop singer-songwriter and composer signed under NBC Universal Entertainment Japan. She initially started by uploading cover songs on Nico Nico Douga under the name "Gazelle". She was then scouted by Ryo, the founder of supercell, and started working with him in 2009. However, she decided to quit supercell in 2011 and made a debut as a solo artist in 2012. Additionally, she mainly focuses on the Jpop genre for her music.</p>
         <p>Spotify: <a href="https://open.spotify.com/artist/15MlyDyZofFYpLb5MrLKVo?si=n7QqYLQvSzS0x5deFD3enQ&dl_branch=1" target="_blank">yanaginagi</a></p>
-        <iframe src="https://open.spotify.com/embed/track/2EKBJB1H8eknpYglNvsvw5" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/2EKBJB1H8eknpYglNvsvw5" loading="lazy" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
         <h3>Kensuke Ushio</h3>
         <img src="/multimedia/sub/Musician/KensukeUshio.webp" alt="Image of Kensuke Ushio" class="imgprofile" />
         <br />
         <small class="multi_credit"><a href="https://pbs.twimg.com/profile_images/1380464302155427840/HcHvReT2_400x400.jpg" target="_blank">Portrait image</a> from @agraph on Twitter.</small>
         <p>Kensuke Ushio (Japanese: 牛尾憲輔; Ushio Kensuke) is a Japanese composer that goes by the stage name "agraph". He was born on March 1, 1983, and mainly does original soundtracks for various anime such as "Japan Sinks: 2020". He is also a rock and EBM (Electronic body music) and a member of the Japanese rock band, Lama.</p>
         <p>Spotify: <a href="https://open.spotify.com/artist/4L0gz16xuM1as1OgYzh1SR?si=XcKVBLjKQYOXl0VjqeAIpg&dl_branch=1" target="_blank">Kensuke Ushio</a></p>
-        <iframe src="https://open.spotify.com/embed/track/22bdVhJPD7Rqq1Zz6EzRL8" class="spotifyres"  allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/22bdVhJPD7Rqq1Zz6EzRL8" loading="lazy" class="spotifyres"  allowtransparency="true" allow="encrypted-media"></iframe>
         <h3>Nanahira</h3>
         <img src="/multimedia/sub/Musician/Nanahira.webp" alt="Image of Nanahira" class="imgprofile" />
         <br />
         <small class="multi_credit"><a href="https://yt3.ggpht.com/ytc/AAUvwnjYSRi4oSeg-2G8h6YjvjPFZ7lDq3unetKM1LWW8w=s900-c-k-c0x00ffffff-no-rj" target="_blank">Portrait image</a> from her <a href="https://www.youtube.com/channel/UC_fYA9QRK-aJnFTgvR_4zug" target="_blank">YouTube channel</a>.</small>
         <p>Nanahira (ななひら) is well known for making covers with her loli voice. If you did not know, a loli basically refers to a female with a childlike appearance and would have a cute, high-pitched voice to sound like a little girl in the anime community.<span hidden>FBI, please don't arrest me.</span> She is also capable of voice acting and would put in some dialogue to make the song more interesting to listen to such as songs like <a href="https://open.spotify.com/track/5wEy787VwmAnA7GGhEzjHR?si=6513542cf9eb4ee1" target="_blank">"Can I Friend You On Bassbook?"</a>. She would often collaborate with Camellia as her voice fits well with Camellia's music. Fun fact: She is also a virtual YouTuber (Vtuber) and streams occasionally.</p>
         <p>Spotify: <a href="https://open.spotify.com/artist/0bkkiFN0ghGl4j9aLi3oQx?si=QNyT2ji0R5-e4dVBTeApjQ&dl_branch=1" target="_blank">Nanahira</a></p>
-        <iframe src="https://open.spotify.com/embed/track/3q6fwV911vTYbOq7CbdeVG" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/3q6fwV911vTYbOq7CbdeVG" loading="lazy" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
         <h3 id="hiroyuki">Hiroyuki Sawano</h3>
         <img src="/multimedia/sub/Musician/HiroyukiSawano.webp" alt="Image of Hiroyuki Sawano" class="imgprofile" />
         <br />
         <small class="multi_credit"><a href="https://www.moshimoshi-nippon.jp/156109/%e9%9d%92%e3%81%ae%e7%a5%93%e9%ad%94%e5%b8%ab-damned-chord%e3%80%80%e6%be%a4%e9%87%8e%e5%bc%98%e4%b9%8b%e3%80%80sawanohiroyuki_3rdal_mainweb-2" target="_blank">Portrait image</a> from Moshi Moshi Nippon.</small>
         <p>Hiroyuki Sawano (Japanese: 澤野弘之; Sawano Hiroyuki) is a Japanese musician and composer who is well known for making original soundtracks for various anime and movies. In 2014, he began a vocal song project named SawanoHiroyuki[nZk]. Additionally, he was born on September 12, 1980, and has been active since 2004.</p>
         <p>Spotify: <a href="https://open.spotify.com/artist/0Riv2KnFcLZA3JSVryRg4y?si=AUBC9pziT5qyeH0l6OB_5w&dl_branch=1" target="_blank">Hiroyuki Sawano</a></p>
-        <iframe src="https://open.spotify.com/embed/track/3DTCJovOSM3wX8PLa00qQ3" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/3DTCJovOSM3wX8PLa00qQ3" loading="lazy" class="spotifyres" allowtransparency="true" allow="encrypted-media"></iframe>
         <h3>Honorable Mention: Shelter by Porter Robinson</h3>
         <div class="embedyt-wrapper">
           <div class="youtube-player" data-id="fzQ6gRAEoy0">
@@ -217,11 +224,14 @@
       </footer>
     </div>
   </div>
+  <!-- jQuery cdn -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- bootstrap 5 cdn bundle js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- my external js -->
   <script src="/js/YouTube_lazy_load.min.js"></script>
   <script src="/js/main.min.js"></script>
-  <script src="/js/GoToTop.min.js"></script>
+  <!-- for disqus comment section js -->
   <script src="/js/Disqus/Musician.js"></script>
 </body>
 </html>

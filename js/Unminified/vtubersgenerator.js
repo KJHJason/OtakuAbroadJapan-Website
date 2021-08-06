@@ -1,9 +1,19 @@
-var num_vtuber = [1,2,3,4,5,6,7,8,9,10,11,12];
+// javascript for the random vtubers generator used on rng.html
+
+// for maintainability purposes to construct an array using a function
+function constructVtubersArray(min, max){
+  var arrayVtubers = []; // makes a new array
+  // for loop to push all the values from min to the max number into the array
+  for(var j = min; j <= max; j++){
+    arrayVtubers.push(j);
+  }
+  return arrayVtubers;
+}
+
+var num_vtuber = constructVtubersArray(1,12);
 function getrandomVtuber(){
   // Random number generator starts here
 
-  // acts a placeholder once the array num runs out of elements
-  const numOriginal_vtuber = [1,2,3,4,5,6,7,8,9,10,11,12];
   // randomly generates a number from the array num
   randNum_vtuber = num_vtuber[Math.floor(Math.random() * num_vtuber.length)];
   // console.log(num);
@@ -14,9 +24,9 @@ function getrandomVtuber(){
       num_vtuber.splice(i, 1); // if matched, it will delete the generated number from the array num to prevent duplicated generated number
     }
   }
-  // if the array num do not have any elements anymore, reset the array num by getting the array num to be equal to the constant numOriginal
+// if the array randNum_vtuber do not have any elements anymore, reset the array num by calling out the function to construct a new array
   if (typeof randNum_vtuber == "undefined"){
-    num_vtuber = numOriginal_vtuber;
+    num_vtuber = constructVtubersArray(1,12);
   }
 
   // main DOM manipulation js starts here for the random vtubers generator
@@ -32,6 +42,7 @@ function getrandomVtuber(){
   // finds the paragraph tags with the id channel to put in the vtuber's channel links
   let linkVtuber = document.getElementById('channel');
 
+  // switch statement to put in/change the generated title, image, description, channel link, and the credit of the image
   switch (randNum_vtuber){
     case 1:
       document.getElementById("GeneratedVtuber").textContent = "Watame Tsunomaki [JP]";

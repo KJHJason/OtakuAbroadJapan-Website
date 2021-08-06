@@ -1,21 +1,46 @@
 <!DOCTYPE html>
+<!--
+██╗░░██╗██╗░░░  ░██╗░░░░░░░██╗██╗░░██╗██╗░░░██╗  ░█████╗░██████╗░███████╗  ██╗░░░██╗░█████╗░██╗░░░██╗
+██║░░██║██║░░░  ░██║░░██╗░░██║██║░░██║╚██╗░██╔╝  ██╔══██╗██╔══██╗██╔════╝  ╚██╗░██╔╝██╔══██╗██║░░░██║
+███████║██║░░░  ░╚██╗████╗██╔╝███████║░╚████╔╝░  ███████║██████╔╝█████╗░░  ░╚████╔╝░██║░░██║██║░░░██║
+██╔══██║██║██╗  ░░████╔═████║░██╔══██║░░╚██╔╝░░  ██╔══██║██╔══██╗██╔══╝░░  ░░╚██╔╝░░██║░░██║██║░░░██║
+██║░░██║██║╚█║  ░░╚██╔╝░╚██╔╝░██║░░██║░░░██║░░░  ██║░░██║██║░░██║███████╗  ░░░██║░░░╚█████╔╝╚██████╔╝
+╚═╝░░╚═╝╚═╝░╚╝  ░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝░░░╚═╝░░░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝  ░░░╚═╝░░░░╚════╝░░╚═════╝░
+
+██╗░░░░░░█████╗░░█████╗░██╗░░██╗██╗███╗░░██╗░██████╗░  ░█████╗░████████╗  ████████╗██╗░░██╗███████╗
+██║░░░░░██╔══██╗██╔══██╗██║░██╔╝██║████╗░██║██╔════╝░  ██╔══██╗╚══██╔══╝  ╚══██╔══╝██║░░██║██╔════╝
+██║░░░░░██║░░██║██║░░██║█████═╝░██║██╔██╗██║██║░░██╗░  ███████║░░░██║░░░  ░░░██║░░░███████║█████╗░░
+██║░░░░░██║░░██║██║░░██║██╔═██╗░██║██║╚████║██║░░╚██╗  ██╔══██║░░░██║░░░  ░░░██║░░░██╔══██║██╔══╝░░
+███████╗╚█████╔╝╚█████╔╝██║░╚██╗██║██║░╚███║╚██████╔╝  ██║░░██║░░░██║░░░  ░░░██║░░░██║░░██║███████╗
+╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░  ╚═╝░░╚═╝░░░╚═╝░░░  ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝
+
+░██████╗░█████╗░██╗░░░██╗██████╗░░█████╗░███████╗  ░█████╗░░█████╗░██████╗░███████╗░█████╗░
+██╔════╝██╔══██╗██║░░░██║██╔══██╗██╔══██╗██╔════╝  ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗
+╚█████╗░██║░░██║██║░░░██║██████╔╝██║░░╚═╝█████╗░░  ██║░░╚═╝██║░░██║██║░░██║█████╗░░╚═╝███╔╝
+░╚═══██╗██║░░██║██║░░░██║██╔══██╗██║░░██╗██╔══╝░░  ██║░░██╗██║░░██║██║░░██║██╔══╝░░░░░╚══╝░
+██████╔╝╚█████╔╝╚██████╔╝██║░░██║╚█████╔╝███████╗  ╚█████╔╝╚█████╔╝██████╔╝███████╗░░░██╗░░
+╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚═╝░╚════╝░╚══════╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝░░░╚═╝░░
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- bootstrap 5 cdn css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- my css -->
   <link rel="stylesheet" href="css/navigationbar.min.css" />
   <link rel="stylesheet" href="css/no_banner_area.min.css" />
   <link rel="stylesheet" href="css/fontimport.css" />
   <link rel="stylesheet" href="css/footer.min.css" />
   <link rel="stylesheet" href="css/loading.min.css" />
   <link rel="stylesheet" href="css/form.min.css" />
+  <!-- two cdn css for the logos on the footer and the back to top button -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <!-- link tags for the favicon for all browsers including safari -->
   <link rel="apple-touch-icon" sizes="180x180" href="multimedia/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="multimedia/favicon-32x32.png" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <title>Contact Form</title>
   <!-- tags for SEO -->
   <meta name="author" content="OtakuAbroadJapan" />
   <meta name="description" content="Use this contact form to contact me if you have any enquiry or have a need to contact me! I would be more than happy to answer them." />
@@ -32,6 +57,8 @@
   <meta name="twitter:title" content="Contact Form | OtakuAbroadJapan" />
   <meta name="twitter:description" content="Please use this contact form to contact me, if needed!" />
   <meta name="twitter:image" content="https://www.otakuabroadjapan.com/multimedia/image_card/twitter/logo.png" />
+  <!-- title for the html document -->
+  <title>Contact Form</title>
 </head>
 <body>
   <!-- navigation bar-->
@@ -57,8 +84,9 @@
             <li><a href="rng">Random Generator</a></li>
             <li><a class="active" href="contact">Contact</a></li>
             <li>
-              <form action="search" method="get">
-                <input type="text" placeholder="Search..." name="q" />
+              <!-- action attribute does not have .html as my htaccess code will strip the .html from the url -->
+              <form action="/search" method="get">
+                <input type="text" placeholder="Search..." name="q" required />
                 <button type="submit"><i class="fa fa-search"></i></button>
               </form>
             </li>
@@ -75,7 +103,7 @@
     </div>
   </div>
   <!-- content below -->
-  <div class="content-area">
+  <div class="content-area" hidden>
     <div class="wrapper">
       <a id="button"></a> <!-- button for go to top feature -->
       <div id="last-content" class="container-fluid">
@@ -88,7 +116,7 @@
           <!-- bootstrap 5 form with a mix of my css and html -->
           <div class="col-xl-6" id="formwidth">
             <!-- form action will go to processing.php but in the action below, .php is excluded as my htaccess code will strip the .php in the url -->
-            <form action="processing" class="needs-validation" novalidate method="post">
+            <form action="processing" id="contact_form" novalidate method="post">
               <div class="form-group alignleft">
                 <label for="name" class="labeltext">Name:</label>
                 <input type="text" class="form-control" id="name" placeholder="Joseph Joestar" name="name" required />
@@ -181,11 +209,13 @@
       </footer>
     </div>
   </div>
+  <!-- jQuery cdn -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- bootstrap 5 cdn bundle js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- my external js -->
   <script src="js/form_data_session.min.js"></script>
   <script src="js/main.min.js"></script>
-  <script src="js/GoToTop.min.js"></script>
   <script src="js/form_validate.min.js"></script>
 </body>
 </html>

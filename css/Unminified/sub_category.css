@@ -1,34 +1,47 @@
-/* for breadcrumbs */
+/*
+main css used for sub-category webpages:
+* AnimeSpots.html
+* AnimeRecommend.html
+* AnimeEvents.html
+* Anisong.html
+* Ost.html
+* Musician.html
+* Hololive.html
+* Nijisanji.html
+* IndependentVtubers.html
+*/
+/* for the breadcrumbs for navigation purposes */
 ul.breadcrumb {
-	padding: 10px 16px;
 	list-style: none;
 	margin-top: 15px;
-	background-color: #000;
 	margin-left: 10px;
 }
-
 ul.breadcrumb li {
 	display: inline;
 	font-size: 1.5em;
 	color: #949494;
+	/*
+	darkened colour on the last list for user to know where he/she is at.
+	E.g. Home / Anime / Anime Recommendations <= Anime Recommendations will be darkened
+	*/
 }
-
 ul.breadcrumb li+li:before {
 	padding: 8px;
 	color: #fff;
 	content: "/\00a0";
+	/* for the "/" content between two lists. E.g. Home / Anime / Anime Recommendations */
 }
-
 ul.breadcrumb li a {
 	color: #fff;
 	text-decoration: none;
+	/* to get rid of the default underline text-decoration */
 }
-
+/* css for the breadcrumb upon hover which will darken the anchor text and underline it */
 ul.breadcrumb li a:hover {
 	color: #949494;
 	text-decoration: underline;
 }
-
+/* for responsiveness */
 @media (max-width: 450px) {
 	.breadcrumb {
 		font-size: 0.8em;
@@ -36,36 +49,36 @@ ul.breadcrumb li a:hover {
 		text-align: left;
 	}
 }
-
-@media (max-width: 240px) {
+@media (max-width: 350px) {
 	.breadcrumb {
-		font-size: 4vw;
+		font-size: 5vw;
 	}
 }
 /* for table text colour and bg colour */
 table tr td {
 	color: #000;
 }
-
 table tr th {
 	color: #000;
 }
-
 table {
 	background-color: #fff;
-	font-size: 1.2em;
+	font-size: 1.33em;
 	border-radius: 20px;
 }
-
 th,
 tr,
 td {
 	border: 2px solid black;
 }
-
 @media (max-width: 768px) {
 	table {
-		font-size: 1em;
+		font-size: 1.2em;
+	}
+}
+@media (max-width: 350px) {
+	table {
+		font-size: 5vw;
 	}
 }
 /* for the content filtering system */
@@ -73,18 +86,32 @@ select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
+	/* for cross-browsers compatibility css above */
 	appearance: none;
 	outline: 0;
-	border: 0 !important;
+	/* outline: 0; removes the outline when the select options html is selected */
+	border: 0;
 	background: #262626;
 	flex: 1;
+	/*
+	flex: 1; is short for
+	* flex-grow: 1; -> The div will grow in same proportion as the window size.
+	* flex-shrink: 1; -> The div will shrink in same proportion as the window size.
+	* flex-basis: 0n; -> explanation below.
+	Where n represent the length unit such as %.
+	The div does not have a starting value as such and will
+	take up screen as per the screen size available for.
+	E.g.:- if 5 divs are in the wrapper then each div will take 20%.
+	* as explained in this Stack Overflow question; https://stackoverflow.com/questions/37386244/what-does-flex-1-mean
+	* example: https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+	*/
 	padding: 0 .5em;
 	color: #fff;
 	cursor: pointer;
+	/* make it so that when the user hover over the select html */
 	font-size: 1.6em;
 	font-family: serif;
 }
-
 .select {
 	margin: auto;
 	position: relative;
@@ -93,73 +120,67 @@ select {
 	height: 48px;
 	background: #262626;
 	overflow: hidden;
+	/* overflow hidden to hide the corners to make it look round */
 	border-radius: 4px;
 }
-
 .select::after {
 	content: '\25BC';
+	/* content for the triangle logo facing downwards */
 	position: absolute;
 	line-height: 3;
 	top: 0;
 	right: 0;
 	padding: 0 1em;
 	background: #949494;
-	cursor: pointer;
 	pointer-events: none;
+	/*
+	set it so that it will not react to pointer events for the box with the triangle logo
+	so that the pointer-events for the whole select bar will work.
+	*/
 	transition: .25s all ease;
+	/* transition for changing colour upon hover */
 }
-
 .select:hover::after {
 	color: #fff;
 }
-
 @media (max-width: 768px) {
 	.select {
 		width: 90%;
 	}
 }
-
 @media (max-width: 768px) {
 	select {
 		font-size: 1em;
 	}
 }
-
-0
-/* to change tooltip colours in bootstrap 5 */
+/* to change tooltip colours in bootstrap 5 used on Hololive.html */
 .tooltip.show {
 	opacity: 1;
 }
-
 .tooltip-inner {
 	background-color: #fff;
 	box-shadow: 0px 0px 4px black;
 	color: #000;
 	opacity: 1;
 }
-
 .tooltip.bs-tooltip-top .tooltip-arrow::before {
 	border-top-color: #fff;
 }
-
 .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
 	border-bottom-color: #fff;
 }
-
 .tooltip.bs-tooltip-start .tooltip-arrow::before {
 	border-left-color: #fff;
 }
-
 .tooltip.bs-tooltip-end .tooltip-arrow::before {
 	border-right-color: #fff;
 }
-/* for the text with the tooltip applied */
+/* for the text with the tooltip applied (not the text inside the tooltip/the title="text"!)*/
 .tooltipcssstyle {
 	color: #fff;
 	text-decoration: underline;
 	cursor: default;
 }
-
 .tooltipcssstyle:hover {
 	transition: .5s;
 	color: #949494;
@@ -169,7 +190,6 @@ select {
 	list-style: none;
 	color: #fff;
 }
-
 #disqus_thread {
 	color: #fff !important;
 }

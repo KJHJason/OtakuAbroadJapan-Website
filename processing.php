@@ -41,11 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
   $headers = "From:" . $from;
   $headers2 = "From:" . $to;
 
-  //calculating the length for validation
+  // calculating the length for validation
   $userMessageLen = strlen($userMessage);
   $emailLen = strlen($from);
+  $subjectLen = strlen($UserSubject); // must be more than 10 characters as in the first few lines, it will add "Subject: " + the user's entered subject
+  $userName = strlen($name);
 
-  if ($emailLen >= 6  and $userMessageLen > 20){
+  if ($emailLen >= 6  and $userMessageLen > 20 and $subjectLen > 10 and $userName >= 1){
     mail($to,$UserSubject,$message,$headers); // sends an email to me
     mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
 
@@ -68,7 +70,7 @@ else{
   echo '</script>';
 }
 
-// to prevent script injections
+// to prevent script injections and remove whitespace characters
 function test_input($data){
   $data = trim($data); // remove any unnecessary characters (extra space, tab, newline)
   $data = stripslashes($data); // remove any blackslashes (\)

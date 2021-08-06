@@ -1,3 +1,5 @@
+// javascript used on AnimeRecommend.html for the filtering system
+
 // locating each of anime genres divs for filtering using DOM and getElementsByClassName
 const scifi_content = document.getElementsByClassName("SF");
 const romance_content = document.getElementsByClassName("R");

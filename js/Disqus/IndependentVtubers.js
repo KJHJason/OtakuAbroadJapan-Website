@@ -1,3 +1,4 @@
+// JavaScript provided by Disqus just that I had to learn how to edit the code to use it on my page through reading their documentation
 var disqus_config = function () {
 this.page.url = 'https://www.otakuabroadjapan.com/blogs/sub/IndependentVtubers';
 this.page.identifier = "000005";

@@ -1,3 +1,9 @@
+/*
+main css used for the three main category webpages:
+* anime.html
+* music.html
+* vtubers.html
+*/
 /* to hide sub-category links when screen width is below 1200px */
 @media (max-width: 1199px) {
 	.hide-xl {

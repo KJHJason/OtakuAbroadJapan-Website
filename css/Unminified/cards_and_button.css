@@ -1,3 +1,10 @@
+/* used for the bootstrap 5 cards and the generate button */
+/*
+used on:
+* index.html (bootstrap 5 cards)
+* rng.html (generate button)
+*/
+
 /* to resize the bootstrap 5 cards to suit the screen width */
 @media (max-width: 768px) {
 	.card {
@@ -5,7 +12,6 @@
 		margin: auto;
 	}
 }
-
 @media (max-width: 576px) {
 	.card {
 		width: 95% !important;
@@ -29,7 +35,6 @@
 	box-shadow: 0 9px #999;
 	/* box-shadow: 0px to the left, 9px down */;
 }
-
 .buttonstyling:active {
 	background-color: #262626;
 	box-shadow: 0 5px #666;

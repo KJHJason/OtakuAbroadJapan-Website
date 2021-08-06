@@ -1,3 +1,5 @@
+// javascript for collecting the user's input on contact.html upon submitting the form using Web Storage
+
 function collectData(){
   // retrives values from the form upon submitting it
   let name = document.getElementById("name").value;

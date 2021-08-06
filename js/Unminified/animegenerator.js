@@ -1,9 +1,19 @@
-var num_anime = [1,2,3,4,5,6,7,8,9,10,11];
+// javascript for the random anime generator used on rng.html
+
+// for maintainability purposes to construct an array using a function
+function constructAnimeArray(min, max){
+  var arrayAnime = []; // makes a new array
+  // for loop to push all the values from min to the max number into the array
+  for(var j = min; j <= max; j++){
+    arrayAnime.push(j);
+  }
+  return arrayAnime;
+}
+
+var num_anime = constructAnimeArray(1,11);
 function getrandomAnime(){
   // Random number generator starts here
 
-  // acts a placeholder once the array num runs out of elements
-  const numOriginal_anime = [1,2,3,4,5,6,7,8,9,10,11];
   // randomly generates a number from the array num
   randNum_anime = num_anime[Math.floor(Math.random() * num_anime.length)];
   // console.log(num);
@@ -14,9 +24,9 @@ function getrandomAnime(){
       num_anime.splice(i, 1); // if matched, it will delete the generated number from the array num to prevent duplicated generated number
     }
   }
-  // if the array num do not have any elements anymore, reset the array num by getting the array num to be equal to the constant numOriginal
-  if (typeof randNum == "undefined"){
-    num_anime = numOriginal_anime;
+  // if the array num_anime do not have any elements anymore, reset the array num by calling out the function to construct a new array
+  if (typeof randNum_anime == "undefined"){
+    num_anime = constructAnimeArray(1, 11);
   }
 
   // main DOM manipulation js starts here for the random anime generator
@@ -28,6 +38,7 @@ function getrandomAnime(){
   // finds paragraph element with the id animedescription
   let animedesc = document.getElementById('animedescription');
 
+  // switch statement to put in/change the generated title, image, description
   switch (randNum_anime){
     case 1:
       document.getElementById("GeneratedAnime").innerText = "Tsuki ga kirei [Romance]";

@@ -1,22 +1,27 @@
-//retrieves the query string data
+// for displaying the user's search query from the url onto the html document on search.html
+
+// retrieves the query string data
 let searchData = location.search;
 
-//to remove the ? from the query string
+// to remove the ? from the query string
 searchData =  searchData.substring(1, searchData.length);
 
-//make it readable from hi+world to text=hi world
-while ( searchData.indexOf("+") != -1) searchData =  searchData.replace("+", " ");
+// now to make it readable from "hi+world" to "hi world"
+/*
+* how it works:
+* basically the line below (line 16), the searchData.indexOf() will return the position of the first occurrence of the "+" in the searchData string
+* afterwards, it will replace the "+" with " ", aka a whitespace character
+* it will keep looping until the indexOf() returns -1 which means that the "+" has all been replaced by " "
+*/
+while (searchData.indexOf("+") != -1) searchData =  searchData.replace("+", " ");
 
-//to decode any special characters or other languages such as Japanese in the string if needed
+// to decode any special characters or other languages such as Japanese in the string if needed
 searchData = decodeURI( searchData);
 
-//split by & and create a new array
-let searchArray = searchData.split("&");
-let searchQuery = [];
+// split the string by = which would create an array
+let searchArray = searchData.split("=");
 
-//to split the array string from [q=hello world] to ["q", "hello world"]
-searchQuery = searchArray[0].split("=");
-console.log(searchQuery);
-if (searchQuery[0] == "q"){
-  document.getElementById("searched").innerHTML=searchQuery[1];
+// checks if the first element is "q" and if so, put in the 2nd element which would be the searched keywords into the span tags with the id, "searched"
+if (searchArray[0] == "q"){
+  document.getElementById("searched").innerText = searchArray[1];
 }

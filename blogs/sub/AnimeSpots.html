@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- bootstrap 5 cdn css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- my css -->
   <link rel="stylesheet" href="/css/navigationbar.min.css" />
   <link rel="stylesheet" href="/css/sub_category.min.css" />
   <link rel="stylesheet" href="/css/multimedia.min.css" />
@@ -13,11 +15,12 @@
   <link rel="stylesheet" href="/css/loading.min.css" />
   <link rel="stylesheet" href="/css/font_size.min.css" />
   <link rel="stylesheet" href="/css/banner.min.css" />
+  <!-- two cdn css for the logos on the footer and the back to top button -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <!-- link tags for the favicon for all browsers including safari -->
   <link rel="apple-touch-icon" sizes="180x180" href="/multimedia/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/multimedia/favicon-32x32.png" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <title>Anime Spots</title>
   <!-- tags for SEO -->
   <meta name="author" content="OtakuAbroadJapan" />
   <meta name="description" content="Click here to see my top 5 anime spots to visit in Japan!" />
@@ -34,6 +37,9 @@
   <meta name="twitter:title" content="Anime Spots | OtakuAbroadJapan" />
   <meta name="twitter:description" content="Click here to see my top 5 anime spots to visit in Japan!" />
   <meta name="twitter:image" content="https://www.otakuabroadjapan.com/multimedia/image_card/twitter/Kanda_Shrine_Love_Live_Cropped.png" />
+  <!-- title for the html document -->
+  <title>Anime Spots</title>
+  <!-- embedded css for the banner image -->
   <style>
     #banner-area {
       background-image: url(/multimedia/sub/AnimeSpots/animespotsbanner.webp);
@@ -64,8 +70,9 @@
             <li><a href="/rng">Random Generator</a></li>
             <li><a href="/contact">Contact</a></li>
             <li>
+              <!-- action attribute does not have .html as my htaccess code will strip the .html from the url -->
               <form action="/search" method="get">
-                <input type="text" placeholder="Search..." name="q" />
+                <input type="text" placeholder="Search..." name="q" required />
                 <button type="submit"><i class="fa fa-search"></i></button>
               </form>
             </li>
@@ -83,7 +90,7 @@
     </div>
   </div>
   <!-- content below -->
-  <div class="content-area">
+  <div class="content-area" hidden>
     <div class="wrapper">
       <a id="button"></a> <!-- button for go to top feature -->
       <div><small id="banner_credit">Banner Photo by <a href="https://unsplash.com/@l61012345?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Yilin Liu</a> on Unsplash</small></div>
@@ -95,7 +102,7 @@
           <li>Anime Spots</li>
         </ul>
         <h1>Top 5 Anime Spots to visit in Japan!</h1>
-        <p id="last_updated">Last updated: 22/6/2021</p>
+        <p id="last_updated">Last updated: June 22, 2021</p>
         <h3>1. Kanda Shrine in Chiyoda City, Tokyo.</h3>
         <img src="/multimedia/sub/AnimeSpots/KandaShrine.webp" alt="Comparison Image of Kanda Shrine" class="imgres" />
         <br />
@@ -188,10 +195,13 @@
       </footer>
     </div>
   </div>
+  <!-- jQuery cdn -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- bootstrap 5 cdn bundle js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- my external js -->
   <script src="/js/main.min.js"></script>
-  <script src="/js/GoToTop.min.js"></script>
+  <!-- for disqus comment section js -->
   <script src="/js/Disqus/AnimeSpots.js"></script>
 </body>
 </html>

@@ -1,13 +1,10 @@
-// javascript from https://www.techyleaf.in/2021/05/lazy-load-youtube-video.html
+// javascript from https://www.techyleaf.in/2021/05/lazy-load-youtube-video.html used for blogger but I have adapted it into my html webpages
 
 // for the YouTube iframe attribute and it being added upon user clicking on the lazy loaded image
 function labnolIframe(div) {
   var iframe = document.createElement("iframe"); // creates a iframe tag
   // sets attribute for the iframe
-  iframe.setAttribute(
-    "src",
-    "https://www.youtube.com/embed/" + div.dataset.id + "?autoplay=1&rel=0"
-  );
+  iframe.setAttribute("src", "https://www.youtube.com/embed/" + div.dataset.id + "?autoplay=1&rel=0");
   iframe.setAttribute("allowfullscreen", "1");
   iframe.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
   div.parentNode.replaceChild(iframe, div); // new node, which is the iframe, to replace the div
@@ -32,4 +29,4 @@ function initYouTubeVideos() {
     playerElements[n].appendChild(div); // append div
   }
 }
-document.addEventListener("DOMContentLoaded", initYouTubeVideos); // when the DOM loads, it will execute the function, initYouTubeVideos
+document.addEventListener("DOMContentLoaded", initYouTubeVideos); // when the DOM hierarchy has been fully loaded/constructed, it will execute the function, initYouTubeVideos

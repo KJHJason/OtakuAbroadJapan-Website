@@ -1,3 +1,18 @@
+/* typography css for all webpages except the contact page and its response pages and main category pages */
+/*
+CSS used on these webpages:
+* index.html
+* rng.html
+* AnimeSpots.html
+* AnimeRecommend.html
+* AnimeEvents.html
+* Anisong.html
+* Ost.html
+* Musician.html
+* Hololive.html
+* Nijisanji.html
+* IndependentVtubers.html
+*/
 .content-area h1 {
 	font-family: montserratbold;
 	letter-spacing: 4px;
@@ -7,7 +22,6 @@
 	color: #fff;
 	padding: 20px 0;
 }
-
 .content-area h2 {
 	font-family: montserratbold;
 	letter-spacing: 4px;
@@ -17,7 +31,6 @@
 	color: #fff;
 	padding: 20px 0;
 }
-
 .content-area h3 {
 	font-family: serif;
 	letter-spacing: 4px;
@@ -27,21 +40,18 @@
 	color: #fff;
 	padding: 20px 0;
 }
-
 .content-area p {
 	line-height: 1.6;
 	color: #fff;
 	font-size: 1.33em;
 	margin: 20px 10%;
 }
-
 .vtuberdetails {
 	line-height: 1.6;
 	color: #fff;
 	font-size: 1.33em;
 	margin: 20px 10%;
 }
-
 .card-text {
 	line-height: 1.6;
 	font-size: 1.25em !important;
@@ -53,7 +63,6 @@
 .underlineText {
 	text-decoration: underline;
 }
-
 .underlineWarning {
 	color: #ff0000;
 	text-decoration: underline;
@@ -64,70 +73,56 @@
 		font-size: 1em !important;
 	}
 }
-
 @media (max-width: 768px) {
 	.content-area h1 {
 		font-size: 2em;
 		padding: 30px 5%;
 	}
-
 	.content-area h2 {
 		font-size: 1.75em;
 		padding: 30px 5%;
 	}
-
 	.content-area h3 {
 		font-size: 1.6em;
 		padding: 30px 5%;
 	}
-
 	.content-area p {
 		font-size: 1.2em;
 		margin: 20px 20px;
 		text-align: left;
 	}
-
 	.vtuberdetails {
 		font-size: 1.2em;
 		margin: 20px 20px;
 	}
-
 	.card-text {
 		font-size: 1.2em !important;
 	}
 }
-
 @media (max-width: 576px) {
 	.content-area h1 {
 		padding: 20px 5px;
 	}
-
 	.content-area h2 {
 		font-size: 1.6em;
 	}
-
 	.content-area h3 {
 		font-size: 1.4em;
 	}
-
 	.vtuberdetails {
 		text-align: left;
 	}
 }
-
 @media (max-width: 350px) {
 	.content-area h1 {
 		font-size: 8vw;
 	}
-
 	.content-area h2 {
 		font-size: 8vw;
 	}
-
 	.content-area h3 {
 		font-size: 6vw;
 	}
-
 	.content-area p,
 	.vtuberdetails,
 	.card-text {
@@ -141,13 +136,11 @@
 	padding: 10px 20px 0 0;
 	margin-bottom: 5px;
 }
-
 @media (max-width: 768px) {
 	#banner_credit {
 		font-size: 0.6em;
 	}
 }
-
 @media (max-width: 576px) {
 	#banner_credit {
 		font-size: 0.6em;
@@ -159,19 +152,16 @@
 	color: #fff;
 	margin: 10px;
 }
-
 @media (max-width: 1000px) {
 	.multi_credit {
 		font-size: 0.7em;
 	}
 }
-
 @media (max-width: 768px) {
 	.multi_credit {
 		font-size: 0.6em;
 	}
 }
-
 @media (max-width: 576px) {
 	.multi_credit {
 		font-size: 0.6em;

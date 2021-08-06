@@ -1,3 +1,4 @@
+/* css for the loading screen used on all webpages except the custom error pages */
 /* a wrapper for the loading screen animation */
 .loading-screen {
 	position: fixed;
@@ -61,5 +62,9 @@
 	50% {
 		left: 195px;
 		/* to make it go to the right by 195px at 50% of the animation sequence */
+	}
+	100% {
+		right: 195px;
+		/* to make it go to the left by 195px at 100% of the animation sequence */
 	}
 }

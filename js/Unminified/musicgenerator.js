@@ -1,9 +1,19 @@
-var num_music = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
+// javascript for the random music generator used on rng.html
+
+// for maintainability purposes to construct an array using a function
+function constructMusicArray(min, max){
+  var arrayMusic = []; // makes a new array
+  // for loop to push all the values from min to the max number into the array
+  for(var j = min; j <= max; j++){
+    arrayMusic.push(j);
+  }
+  return arrayMusic;
+}
+
+var num_music = constructMusicArray(1,19);
 function getrandomMusic(){
   // Random number generator starts here
 
-  // acts a placeholder once the array num runs out of elements
-  const numOriginal_music = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
   // randomly generates a number from the array num
   randNum_music = num_music[Math.floor(Math.random() * num_music.length)];
   // console.log(num);
@@ -14,9 +24,9 @@ function getrandomMusic(){
       num_music.splice(i, 1); // if matched, it will delete the generated number from the array num to prevent duplicated generated number
     }
   }
-  // if the array num do not have any elements anymore, reset the array num by getting the array num to be equal to the constant numOriginal
+  // if the array randNum_music do not have any elements anymore, reset the array num by calling out the function to construct a new array
   if (typeof randNum_music == "undefined"){
-    num_music = numOriginal_music;
+    num_music = constructMusicArray(1, 19);
   }
 
   // main DOM manipulation js starts here for the random music generator
@@ -36,12 +46,13 @@ function getrandomMusic(){
   // finds the paragraph tag with the id spotifylink to put the musician's spotify link
   let spotifycredit = document.getElementById("spotifylink");
 
+  // switch statement to put in/change the generated title, image, description, spotify iframe source,  and the credit of the image
   switch (randNum_music){
     case 1:
       document.getElementById('GeneratedMusic').innerText = "Vivy: Fluorite Eye's Song Anisong";
       musicimage.src = "multimedia/sub/AnimeRecommend/Vivy2.webp";
       spotifysong.src = "https://open.spotify.com/embed/playlist/6oNwTOtvndlSK8baxKDNDu";
-      musicdesc.innerHTML = 'Personal comments for the music: Definitely one of my favourite anisong, I would usually listen to it when doing work or just chill to it. Give it a try by clicking the embedded Spotify tracks below! My personal favourite track for Vivy is Harmony of One\'s Heart. Additionally, it is also in my <a href="AnimeRecommend.html#vivy"> my anime recommendations list</a>.';
+      musicdesc.innerHTML = 'Personal comments for the music: Definitely one of my favourite anisong, I would usually listen to it when doing work or just chill to it. Give it a try by clicking the embedded Spotify tracks below! My personal favourite track for Vivy is Harmony of One\'s Heart. Additionally, it is also in my <a href="blogs/sub/AnimeRecommend#vivy">anime recommendations blog</a>.';
       credit.innerHTML = 'Image: Vivy: Fluorite Eye\'s Song key visual';
       spotifycredit.innerHTML = '';
       // if else block of codes to change the width of image depending on the user's screen width
@@ -63,7 +74,7 @@ function getrandomMusic(){
       spotifysong.src = "https://open.spotify.com/embed/track/6HBznW6Doe0w8WBazMavO5";
       musicdesc.innerHTML = 'Personal comments: Camellia whose real name is Masaya Oya (Japanese: 大箭将也; Oya Masaya) is a Japanese musician, born on September 28, 1992, is well known for his fast-paced music. He is very popular among rhythm gamers for having his music being hard to clear on rhythm games such as Osu!, Sound Voltex, and Robeats. His song mostly runs more than 200 BPM which makes his song difficult to clear on rhythm games. Fun fact: his song, "M1LLI0N PP" has an estimated of 24 genres and the BPM ranges from 125 to 234!';
       credit.innerHTML = '<a href="https://pbs.twimg.com/profile_images/1245357551832535040/ko6DuZG7_400x400.png" target="_blank">Portrait image</a> from @cametek on Twitter.';
-      spotifycredit.innerHTML = 'Spotify: <a href="https://open.spotify.com/artist/4bwIf0yXJf0F9AmOl2J78M?si=me6hwOT9S3qVQQXrqlsNlg&dl_branch=1" target="_blank">Camellia</a>'';
+      spotifycredit.innerHTML = 'Spotify: <a href="https://open.spotify.com/artist/4bwIf0yXJf0F9AmOl2J78M?si=me6hwOT9S3qVQQXrqlsNlg&dl_branch=1" target="_blank">Camellia</a>';
       // if else block of codes to change the width of image depending on the user's screen width
       if (screen.width > 768){
         musicimage.style.width = "30%";
@@ -81,7 +92,7 @@ function getrandomMusic(){
       document.getElementById('GeneratedMusic').innerText = "Tsuki ga Kirei Anisong";
       musicimage.src = "multimedia/sub/AnimeRecommend/TsukiGaKirei.webp";
       spotifysong.src = "https://open.spotify.com/embed/album/4mL5uStl7EzFIjrZbgdd0y";
-      musicdesc.innerHTML = 'Personal comments for the music: Honestly, for this anisong from the anime, Tsuki ga kirei, they are one of my personal favourite songs. It actually has been a while since I listened to it but it brings back all the memories from the anime, tsuki ga kirei, when I watched it a few years ago. Definitely a must-try if you have watched the anime, tsuki ga kirei, and in fact, it is also in <a href="blogs/sub/AnimeRecommend.html#tsuki">my anime recommendations list</a> on this website.';
+      musicdesc.innerHTML = 'Personal comments for the music: Honestly, for this anisong from the anime, Tsuki ga kirei, they are one of my personal favourite songs. It actually has been a while since I listened to it but it brings back all the memories from the anime, tsuki ga kirei, when I watched it a few years ago. Definitely a must-try if you have watched the anime, tsuki ga kirei, and in fact, it is also in my <a href="blogs/sub/AnimeRecommend#tsuki">anime recommendations blog</a> on this website.';
       credit.innerHTML = 'Image: Tsuki ga Kirei';
       spotifycredit.innerHTML = '';
       // if else block of codes to change the width of image depending on the user's screen width
@@ -121,7 +132,7 @@ function getrandomMusic(){
       document.getElementById('GeneratedMusic').innerText = "Re:Creators Anisong";
       musicimage.src = "multimedia/sub/Anisong/RECREATORS.webp";
       spotifysong.src = "https://open.spotify.com/embed/track/5vM7uTVvj65yNYKwnuERFo";
-      musicdesc.innerHTML =  'Personal comments for the music: Re:Creators is a reverse isekai anime where anime characters in the anime get transported into the real world. If you did not know, isekai is basically about the main character being transported or reincarnated into another world. I know it sounds confusing but these anime characters from their original world who got transported to the real world are still able to use their abilities but risk getting the real world being destroyed due to "physics". That is the brief synopsis of the anime, and below are the songs from the anime, Re:Creators. It is one of personal favourite as I usually like to listen to Hiroyuki Sawano\'s songs which are also <a href="blogs/sub/Musician.html#hiroyuki">featured on this website</a>.';
+      musicdesc.innerHTML =  'Personal comments for the music: Re:Creators is a reverse isekai anime where anime characters in the anime get transported into the real world. If you did not know, isekai is basically about the main character being transported or reincarnated into another world. I know it sounds confusing but these anime characters from their original world who got transported to the real world are still able to use their abilities but risk getting the real world being destroyed due to "physics". That is the brief synopsis of the anime, and below are the songs from the anime, Re:Creators. It is one of personal favourite as I usually like to listen to Hiroyuki Sawano\'s songs which are also <a href="blogs/sub/Musician#hiroyuki">featured on this website</a>.';
       credit.innerHTML = 'Image: Re:Creators key visual';
       spotifycredit.innerHTML = '';
       // if else block of codes to change the width of image depending on the user's screen width
@@ -199,7 +210,7 @@ function getrandomMusic(){
       break;
     case 9:
       document.getElementById('GeneratedMusic').innerText = "Dr. Stone OST";
-      musicimage.src = "multimedia/sub/Ost/Dr.Stone.webp";
+      musicimage.src = "multimedia/sub/Ost/Dr_Stone.webp";
       spotifysong.src = "https://open.spotify.com/embed/album/7rphokb5ngFoll2nGwvcEY";
       musicdesc.innerHTML =  'Personal comments for the music: This anime OST has a more traditional feel to it, do give it a try as I am not really into traditional music but it is good, especially the track, "From Zero". My personal favourite tracks in this OST are "STONE WORLD", "From Zero", "Be The Adam and Eve Of This Stone World".';
       credit.innerHTML = 'Image: Dr. Stone key visual';
@@ -261,7 +272,7 @@ function getrandomMusic(){
       document.getElementById('GeneratedMusic').innerText = "Utawarerumono: Itsuwari no Kamen OST";
       musicimage.src = "multimedia/sub/AnimeRecommend/Itsuwari_no_kamen.webp";
       spotifysong.src = "https://open.spotify.com/embed/album/6ZuL6lbYE7qE88h0a5v8Zs";
-      musicdesc.innerHTML =  'Personal comments for the music: This anime OST has an orchestra feel to it, if you like to listen to orchestra instruments, this should suit your cup of tea.';
+      musicdesc.innerHTML =  'Personal comments for the music: The original soundtracks for Utawarerumono: Itsuwari no Kamen have a more traditional feel to them which if you like listening to traditional Japanese music, you might like this original soundtracks album. Additionally, if you are into listening to an orchestral piece, you might like this too!';
       credit.innerHTML = 'Image: Utawarerumono: Itsuwari no Kamen key visual';
       spotifycredit.innerHTML = '';
       // if else block of codes to change the width of image depending on the user's screen width
@@ -397,6 +408,26 @@ function getrandomMusic(){
       // removes the hidden attribute from the div with an iframe tag inside with the id, musicembedspotify
       spotifyhidden.removeAttribute("hidden");
       break;
+    case 19:
+      document.getElementById('GeneratedMusic').innerText = "Vivy: Fluorite Eye's Song OST";
+      musicimage.src = "multimedia/sub/Ost/Vivy_OST_Cover.webp";
+      spotifysong.src = "https://open.spotify.com/embed/album/2QAzSH1mwne0Ps5HLZ2naR";
+      musicdesc.innerHTML =  'Personal comments for the music: Vivy’s original soundtracks were recently released and I have been listening to them recently. My personal favourites are “Project: Singularity”, "It\'s not about how long we live, it\'s how we live.", “Peaceful Moment in a Sunrise” and “Time Flies”. “Project: Singularity” has a more sci-fi and serious feel to it as the main concept of the anime is to carry out Project Singularity to save humanity. “It\'s not about how long we live, it\'s how we live.” has a more powerful and dramatic feel to it as the name implies. On the other hand, “Peaceful Moment in a Sunrise” and “Time Flies” has a more chill vibe to them which I like to listen to while I reflect on myself or while I do work or assignments. Give them a listen and see if it is to your likings!';
+      credit.innerHTML = 'Image: Vivy: Fluorite Eye\'s Song OST Cover';
+      spotifycredit.innerHTML = '';
+      // if else block of codes to change the width of image depending on the user's screen width
+      if (screen.width > 768){
+        musicimage.style.width = "60%";
+      }
+      else if (screen.width <= 768 && screen.width >= 576){
+        musicimage.style.width = "70%";
+      }
+      else{
+        musicimage.style.width = "90%";
+      }
+      // removes the hidden attribute from the div with an iframe tag inside with the id, musicembedspotify
+      spotifyhidden.removeAttribute("hidden");
+      break;
     // default case as once the array num has ran out of elements, it will execute this before the array copies the element of numOriginal
     default:
       document.getElementById("GeneratedMusic").innerText ="";
@@ -411,13 +442,13 @@ function getrandomMusic(){
       else{
         musicimage.style.width = "90%";
       }
-      // hides the spotify part
+      // hides the spotify part as there is no spotify track to share
       spotifyhidden.setAttribute("hidden", "");
       // resets the src to an empty src
       spotifysong.src = "";
       credit.innerHTML = "";
       spotifycredit.innerHTML = '';
-      musicdesc.innerHTML = 'You have already generated all 18 unique music related recommendations which has been recommended on this website. If you wish to generate them again, please click on the generate button again!';
+      musicdesc.innerHTML = 'You have already generated all 19 unique music related recommendations which has been recommended on this website. If you wish to generate them again, please click on the generate button again!';
       break;
   }
   // removes the hidden attribute from the small tags with the id, musiccredit
