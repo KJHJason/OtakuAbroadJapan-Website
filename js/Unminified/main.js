@@ -15,8 +15,8 @@ $(window).on("load",function(){
 
 // javascripts to remove the hidden attribute from the content when the page has finish loading
 var content = document.getElementsByClassName("content-area");
-// event listener to detect when all the images and sub-frames/iframes have loaded
-window.addEventListener("load", function(){
+// event listener to detect when the DOM hierarchy has finish constructing/loaded
+window.addEventListener("DOMContentLoaded", function(){
   content[0].removeAttribute("hidden"); // content[0] as there is only one content-area class for every page
 });
 // END OF LOADING SCREEN JAVASCRIPT //
