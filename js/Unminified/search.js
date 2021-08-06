@@ -22,6 +22,8 @@ searchData = decodeURI( searchData);
 let searchArray = searchData.split("=");
 
 // checks if the first element is "q" and if so, put in the 2nd element which would be the searched keywords into the span tags with the id, "searched"
+// it will also update the search.html title to the search query. E.g. Searched for "Vivy"
 if (searchArray[0] == "q"){
   document.getElementById("searched").innerText = searchArray[1];
+  document.title = 'Search results for "' + searchArray[1] + '"';
 }
