@@ -22,8 +22,11 @@ css for those webpages that has a banner
 	/* makes the banner image sticky/not move upon scrolling */
 	top: -100px;
 	/* displaces the banner image by 100px from the top */
-	-webkit-background-size: cover;
-	/* ensure cross-browser compatibility for safari browsers */
+	background-size: cover;
+	/*
+	Resize the background image to cover the entire container,
+	even if it has to stretch the image or cut a little bit off one of the edges
+	*/
 	background-position: center;
 }
 .content-area {

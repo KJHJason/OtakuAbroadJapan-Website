@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function(){
 // START OF HAMBURGER MENU JAVASCRIPT //
 // javascript below for the navbar hamburger icon
 // finds the hamburger menu button with the id, nav-icon
-navbtn = document.getElementById("nav-icon");
+let navbtn = document.getElementById("nav-icon");
 
 // function to be executed when the user clicks on the hamburger menu on devices with smaller screen
 function btnclick(){
@@ -44,7 +44,7 @@ var scrollToTopBtn = document.getElementById("button");
 
 window.onscroll = function(){
   // when the user scroll up or down, it will execute the function scrollFunction
-  scrollFunction()
+  scrollFunction();
 };
 function scrollFunction(){
   /*
@@ -52,24 +52,24 @@ function scrollFunction(){
   * Else, make the button disappear when at the top of the html document.
   */
   if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTopBtn.classList.add("show")
+    scrollToTopBtn.classList.add("show");
   }
   else{
-    scrollToTopBtn.classList.remove("show")
+    scrollToTopBtn.classList.remove("show");
   }
 }
 
 // When the user clicks on the button, it will scroll to the top of the document by calling out the function, scrollToTop
-scrollToTopBtn.addEventListener("click", scrollToTop)
+scrollToTopBtn.addEventListener("click", scrollToTop);
 
 //documentElement returns the element that is the root element of the document which is <html>
-var rootElement = document.documentElement
+var rootElement = document.documentElement;
 
 function scrollToTop() {
   // Scroll to top logic
   rootElement.scrollTo({
     top: 0, // go to top at 0px from the top
     behavior: "smooth" // for smoother scrolling to top when the function executes but is not supported on safari browsers
-  })
+  });
 }
 // END OF GO TO TOP BUTTON JAVASCRIPT //

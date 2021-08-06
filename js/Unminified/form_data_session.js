@@ -7,26 +7,27 @@ function collectData(){
   let type = document.getElementById("Enquirytype").value;
   let subject = document.getElementById("subject").value;
   let message = document.getElementById("message").value;
+  let typeContent = "";
 
   // switch statment to match the enquiry type for the respective description for user to read
   switch (type){
     case "General_Enquiry":
-      var typeContent = "General Enquiry";
+      typeContent = "General Enquiry";
       break;
     case "Copyright":
-      var typeContent = "Copyright Issues with Multimedia Assets Used";
+      typeContent = "Copyright Issues with Multimedia Assets Used";
       break;
     case "Clarifications":
-      var typeContent = "Need Futher Clarifications Regarding Something";
+      typeContent = "Need Futher Clarifications Regarding Something";
       break;
     case "Inaccurate_Info":
-      var typeContent = "Inaccurate Information on the Website";
+      typeContent = "Inaccurate Information on the Website";
       break;
     case "Feedback":
-      var typeContent = "Feedback";
+      typeContent = "Feedback";
       break;
     case "Others":
-      var typeContent = "Others";
+      typeContent = "Others";
       break;
   }
   // uses Web Storage to store the form data
