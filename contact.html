@@ -91,7 +91,7 @@
           </div>
           <!-- bootstrap 5 form with a mix of my css and html -->
           <div class="col-xl-6" id="formwidth">
-            <form action="processing" id="contact_form" novalidate method="post">
+            <form action="processing" id="contact_form" novalidate method="post" onsubmit="collectData()">
               <div class="form-group alignleft">
                 <label for="name" class="labeltext">Name:</label>
                 <input type="text" class="form-control" id="name" placeholder="Joseph Joestar" name="name" required />
@@ -125,7 +125,7 @@
                 <textarea class="form-control" name="message" id="message" placeholder="Enter your message/enquiry here..." rows="15" required></textarea>
                 <div class="invalid-feedback">Message cannot be blank.</div>
               </div>
-              <button type="submit" class="btn btn-primary submitbuttoncss" onclick="collectData()">Submit</button>
+              <button type="submit" class="btn btn-primary submitbuttoncss">Submit</button>
             </form>
           </div>
         </div>
