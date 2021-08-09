@@ -14,14 +14,14 @@ var num_music = constructMusicArray(1,19);
 function getrandomMusic(){
   // Random number generator starts here
 
-  // randomly generates a number from the array num
+  // randomly generates a number from the array num_music
   randNum_music = num_music[Math.floor(Math.random() * num_music.length)];
   // console.log(num);
 
   // going from highest number to the lowest, go through the array and see if it matches the generated number
   for (var i = num_music.length - 1; i >= 0; i--){
     if (num_music[i] === randNum_music){
-      num_music.splice(i, 1); // if matched, it will delete the generated number from the array num to prevent duplicated generated number
+      num_music.splice(i, 1); // if matched, it will delete the generated number from the array num_music to prevent duplicated generated number
     }
   }
   // if the array randNum_music do not have any elements anymore, reset the array num_music by calling out the function to construct a new array
