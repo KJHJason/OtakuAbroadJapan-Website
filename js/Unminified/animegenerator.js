@@ -95,7 +95,7 @@ function getrandomAnime(){
       animeimage.src = "multimedia/sub/AnimeRecommend/plastic_memories.webp";
       animedesc.innerHTML = 'Anime Description: Plastic Memories revolves around a romance story between the main character Tsukasa Mizugaki and an android, Isla. It is set in a world where humanity has invented a highly advanced android or to put it simply, an advanced A.I. robot, which is referred to as a "Giftias" which is almost indistinguishable from a normal human being. However, they only have a maximum lifespan of 81,920 hours, or around nine years and four months. After their lifespan, they will have to be deactivated in order to avoid losing their memories and becoming a dangerous entity. Hence, the main characters are tasked as partners in the Terminal Service One to retrieve Giftias before their expiry date. Though in the process of it, they developed feelings for each other. However, nothing lasts forever as Isla\'s expiry date is near and Tsukasa has to come to terms with his feelings before then.';
       break;
-    // default case as once the array num has ran out of elements, it will execute this before the array copies the element of numOriginal
+    // default case as once the array num has ran out of elements, it will execute this before resetting the array num by calling out the function to construct a new array
     default:
       document.getElementById("GeneratedAnime").innerText ="";
       animeimage.src = "multimedia/empty.webp";
