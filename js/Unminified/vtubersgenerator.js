@@ -14,17 +14,17 @@ var num_vtuber = constructVtubersArray(1,12);
 function getrandomVtuber(){
   // Random number generator starts here
 
-  // randomly generates a number from the array num
+  // randomly generates a number from the array num_vtuber
   randNum_vtuber = num_vtuber[Math.floor(Math.random() * num_vtuber.length)];
   // console.log(num);
 
   // going from highest number to the lowest, go through the array and see if it matches the generated number
   for (var i = num_vtuber.length - 1; i >= 0; i--){
     if (num_vtuber[i] === randNum_vtuber){
-      num_vtuber.splice(i, 1); // if matched, it will delete the generated number from the array num to prevent duplicated generated number
+      num_vtuber.splice(i, 1); // if matched, it will delete the generated number from the array num_vtuber to prevent duplicated generated number
     }
   }
-// if the array randNum_vtuber do not have any elements anymore, reset the array num by calling out the function to construct a new array
+// if the array randNum_vtuber do not have any elements anymore, reset the array num_vtuber by calling out the function to construct a new array
   if (typeof randNum_vtuber == "undefined"){
     num_vtuber = constructVtubersArray(1,12);
   }
