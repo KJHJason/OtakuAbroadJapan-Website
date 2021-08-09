@@ -24,7 +24,7 @@ function getrandomMusic(){
       num_music.splice(i, 1); // if matched, it will delete the generated number from the array num to prevent duplicated generated number
     }
   }
-  // if the array randNum_music do not have any elements anymore, reset the array num by calling out the function to construct a new array
+  // if the array randNum_music do not have any elements anymore, reset the array num_music by calling out the function to construct a new array
   if (typeof randNum_music == "undefined"){
     num_music = constructMusicArray(1, 19);
   }
@@ -428,7 +428,7 @@ function getrandomMusic(){
       // removes the hidden attribute from the div with an iframe tag inside with the id, musicembedspotify
       spotifyhidden.removeAttribute("hidden");
       break;
-    // default case as once the array num has ran out of elements, it will execute this before the array copies the element of numOriginal
+    // default case as once the array num has ran out of elements, it will execute this before resetting the array num_music by calling out the function to construct a new array
     default:
       document.getElementById("GeneratedMusic").innerText ="";
       musicimage.src = "multimedia/empty.webp";
